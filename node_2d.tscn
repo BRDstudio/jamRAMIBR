@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3nibbd7rokud"]
+[gd_scene load_steps=6 format=3 uid="uid://d3nibbd7rokud"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_8hpbj"]
+[ext_resource type="Texture2D" uid="uid://20labrj3mbgj" path="res://Captura de pantalla 2024-10-14 202141.png" id="1_mr5gu"]
 [ext_resource type="Texture2D" uid="uid://djpca1e18y14o" path="res://icon.svg" id="2_ct10n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfgpn"]
@@ -10,6 +11,11 @@ size = Vector2(105, 112)
 size = Vector2(1234, 20)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="CapturaDePantalla2024-10-14202141" type="Sprite2D" parent="."]
+position = Vector2(580.5, 326.5)
+scale = Vector2(6.81503, 21.7742)
+texture = ExtResource("1_mr5gu")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_8hpbj")
