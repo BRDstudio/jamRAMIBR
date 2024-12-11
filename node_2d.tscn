@@ -9,12 +9,12 @@
 size = Vector2(105, 112)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x5pqo"]
-size = Vector2(1234, 463)
+size = Vector2(2371, 463)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Textura-de-una-empanada-de-la-hamburguesa-85528408" type="Sprite2D" parent="."]
-position = Vector2(717.5, 354.5)
+position = Vector2(750, 322)
 scale = Vector2(3.30875, 4.48653)
 texture = ExtResource("1_80bb1")
 
@@ -34,14 +34,15 @@ position = Vector2(85, 61)
 stream = ExtResource("3_jsxqp")
 
 [node name="CapturaDePantalla2024-12-11184514" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(62, 75)
+position = Vector2(79, 34)
+scale = Vector2(1.7757, 1.54531)
 texture = ExtResource("3_2uokw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(10, 13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(842, -232)
+position = Vector2(615.5, 605)
 shape = SubResource("RectangleShape2D_x5pqo")
 
 [node name="Label" type="Label" parent="."]
