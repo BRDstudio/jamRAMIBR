@@ -22,3 +22,7 @@ texture = ExtResource("2_ct10n")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
 
 [node name="Node" type="Node" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(549, 333)
+texture = ExtResource("2_ct10n")
