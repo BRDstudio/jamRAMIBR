@@ -18,5 +18,3 @@ shape = SubResource("RectangleShape2D_cfgpn")
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(105, 64)
 texture = ExtResource("2_ct10n")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
