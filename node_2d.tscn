@@ -26,3 +26,7 @@ texture = ExtResource("2_ct10n")
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(549, 333)
 texture = ExtResource("2_ct10n")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(495, 79)
+texture = ExtResource("2_ct10n")
