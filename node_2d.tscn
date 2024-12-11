@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3nibbd7rokud"]
+[gd_scene load_steps=5 format=3 uid="uid://d3nibbd7rokud"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_8hpbj"]
 [ext_resource type="Texture2D" uid="uid://djpca1e18y14o" path="res://icon.svg" id="2_ct10n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfgpn"]
-size = Vector2(188, 112)
+size = Vector2(105, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5pqo"]
+size = Vector2(1234, 20)
 
 [node name="Node2D" type="Node2D"]
 
@@ -12,41 +15,29 @@ size = Vector2(188, 112)
 script = ExtResource("1_8hpbj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(84, 66)
+position = Vector2(81.5, 66)
 shape = SubResource("RectangleShape2D_cfgpn")
-
-[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(105, 64)
-texture = ExtResource("2_ct10n")
-
-[node name="Icon" type="Sprite2D" parent="CharacterBody2D/Icon"]
-position = Vector2(321, 376)
-texture = ExtResource("2_ct10n")
-
-[node name="Icon2" type="Sprite2D" parent="CharacterBody2D/Icon"]
-position = Vector2(612, 440)
-texture = ExtResource("2_ct10n")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
 
-[node name="Node" type="Node" parent="."]
+[node name="Icon3" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(84, 64)
+texture = ExtResource("2_ct10n")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(101, 71)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(10, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(610, 418)
+shape = SubResource("RectangleShape2D_x5pqo")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(853, 333)
+position = Vector2(506, 95)
 texture = ExtResource("2_ct10n")
 
 [node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(585, 286)
-texture = ExtResource("2_ct10n")
-
-[node name="Icon2" type="Sprite2D" parent="Icon2"]
-position = Vector2(305, 6)
-texture = ExtResource("2_ct10n")
-
-[node name="Icon3" type="Sprite2D" parent="."]
-position = Vector2(153, 417)
-texture = ExtResource("2_ct10n")
-
-[node name="Icon4" type="Sprite2D" parent="."]
-position = Vector2(282, 256)
+position = Vector2(864, 245)
 texture = ExtResource("2_ct10n")
