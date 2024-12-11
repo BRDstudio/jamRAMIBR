@@ -1,21 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3nibbd7rokud"]
+[gd_scene load_steps=7 format=3 uid="uid://d3nibbd7rokud"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_8hpbj"]
-[ext_resource type="Texture2D" uid="uid://20labrj3mbgj" path="res://Captura de pantalla 2024-10-14 202141.png" id="1_mr5gu"]
-[ext_resource type="Texture2D" uid="uid://djpca1e18y14o" path="res://icon.svg" id="2_ct10n"]
+[ext_resource type="Texture2D" uid="uid://cbfomxev8f0b1" path="res://textura-de-una-empanada-de-la-hamburguesa-85528408.webp" id="1_80bb1"]
+[ext_resource type="Texture2D" uid="uid://ctqtuebpy4y4x" path="res://Captura de pantalla 2024-12-11 184514.png" id="3_2uokw"]
+[ext_resource type="AudioStream" uid="uid://ha6eogt4iss1" path="res://fart-9-228245.mp3" id="3_jsxqp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfgpn"]
 size = Vector2(105, 112)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x5pqo"]
-size = Vector2(1234, 20)
+size = Vector2(1234, 463)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CapturaDePantalla2024-10-14202141" type="Sprite2D" parent="."]
-position = Vector2(580.5, 326.5)
-scale = Vector2(6.81503, 21.7742)
-texture = ExtResource("1_mr5gu")
+[node name="Textura-de-una-empanada-de-la-hamburguesa-85528408" type="Sprite2D" parent="."]
+position = Vector2(717.5, 354.5)
+scale = Vector2(3.30875, 4.48653)
+texture = ExtResource("1_80bb1")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_8hpbj")
@@ -26,24 +27,29 @@ shape = SubResource("RectangleShape2D_cfgpn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
 
-[node name="Icon3" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(84, 64)
-texture = ExtResource("2_ct10n")
-
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(101, 71)
+position = Vector2(85, 61)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("3_jsxqp")
+
+[node name="CapturaDePantalla2024-12-11184514" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(62, 75)
+texture = ExtResource("3_2uokw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(10, 13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(610, 418)
+position = Vector2(610, 639.5)
 shape = SubResource("RectangleShape2D_x5pqo")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(506, 95)
-texture = ExtResource("2_ct10n")
-
-[node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(864, 245)
-texture = ExtResource("2_ct10n")
+[node name="Label" type="Label" parent="."]
+offset_left = 259.0
+offset_top = 159.0
+offset_right = 954.0
+offset_bottom = 212.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "Las epicas aventuyras de raul y perro de aitor que tiene un  cojon(aitor)
+"
