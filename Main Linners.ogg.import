@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dg23tex6e8rjr"
+path="res://.godot/imported/Main Linners.ogg-5bd0ec07374099e08eac3ef585f492ac.oggvorbisstr"
+
+[deps]
+
+source_file="res://Main Linners.ogg"
+dest_files=["res://.godot/imported/Main Linners.ogg-5bd0ec07374099e08eac3ef585f492ac.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
