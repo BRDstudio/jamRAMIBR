@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6vgiusb1c0lh"]
+[gd_scene load_steps=12 format=3 uid="uid://b6vgiusb1c0lh"]
 
 [ext_resource type="Texture2D" uid="uid://cxolu0mo18e5r" path="res://pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.jpg" id="1_emf8v"]
 [ext_resource type="Script" path="res://ramp.gd" id="2_1i0dr"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://bola nieve.gd" id="3_cgn31"]
 [ext_resource type="Script" path="res://Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.gd" id="4_j52rl"]
 [ext_resource type="Texture2D" uid="uid://d1fdo1ogebqws" path="res://solo.jpg" id="5_avpvg"]
+[ext_resource type="AudioStream" uid="uid://bfp07jd3rviwc" path="res://Snow.mp3" id="7_8m1lr"]
+[ext_resource type="AudioStream" uid="uid://c7gsuxtf3kb2k" path="res://Jump.ogg" id="8_c64hj"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yflds"]
 a = Vector2(7912, 3880)
@@ -13,6 +15,14 @@ b = Vector2(-141, -173)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ensss"]
 radius = 35.0143
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rtfsm"]
+particle_flag_disable_z = true
+direction = Vector3(-20, -10, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 98, 0)
+scale_max = 10.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -86,6 +96,7 @@ offset_bottom = 1754.0
 rotation = 0.466665
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(-241, -73)
 freeze_mode = 1
 script = ExtResource("3_cgn31")
 
@@ -93,6 +104,7 @@ script = ExtResource("3_cgn31")
 position = Vector2(380, 98)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+visible = false
 position = Vector2(378, 102)
 shape = SubResource("CircleShape2D_ensss")
 
@@ -104,12 +116,368 @@ texture = ExtResource("3_4xvto")
 [node name="Timer2" type="Timer" parent="RigidBody2D"]
 wait_time = 1.5
 
-[node name="Solo" type="Sprite2D" parent="."]
-top_level = true
-position = Vector2(224, 395)
+[node name="GPUParticles2D" type="GPUParticles2D" parent="RigidBody2D"]
+position = Vector2(380, 136)
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_rtfsm")
+lifetime = 2.0
+
+[node name="Suelos" type="Node2D" parent="."]
+position = Vector2(378.44, 465.363)
 rotation = 0.464328
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.788273, 0.5)
+
+[node name="Solo" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(368.327, 580.987)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
 texture = ExtResource("5_avpvg")
+
+[node name="Solo2" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(-548.113, 119.624)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo3" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(2200.64, 1501.74)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo4" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(1284.2, 1040.37)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo5" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(4036.64, 2426.74)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo6" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(3120.2, 1965.37)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo7" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(5868.95, 3347.49)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo8" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(4952.51, 2886.12)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo9" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(7685.64, 4269.74)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo10" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(6769.2, 3808.37)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo11" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(9517.95, 5190.49)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo12" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(8601.51, 4729.12)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo13" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(11353.9, 6115.49)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo14" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(10437.5, 5654.12)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo15" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(13186.3, 7036.23)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo16" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(12269.8, 6574.87)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo17" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(-6956.36, -3108.26)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo18" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(-7872.8, -3569.63)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo19" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(-5124.05, -2187.51)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo20" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(-6040.49, -2648.88)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo21" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(-3288.05, -1262.51)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo22" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(-4204.49, -1723.88)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo23" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(-1455.74, -341.765)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo24" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(-2372.18, -803.128)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo25" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(22345.3, 11646)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo26" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(21428.9, 11184.6)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo27" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(24177.6, 12566.7)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo28" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(23261.2, 12105.4)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo29" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(26013.6, 13491.7)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo30" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(25097.2, 13030.4)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo31" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(27845.9, 14412.5)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo32" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(26929.5, 13951.1)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo33" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(29662.6, 15334.7)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo34" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(28746.2, 14873.4)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo35" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(31494.9, 16255.5)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo36" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(30578.5, 15794.1)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo37" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(33331, 17180.5)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo38" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(32414.5, 16719.1)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo39" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(35163.3, 18101.2)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo40" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(34246.8, 17639.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo41" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(15020.6, 7956.74)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo42" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(14104.2, 7495.37)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo43" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(16852.9, 8877.48)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo44" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(15936.5, 8416.12)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo45" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(18688.9, 9802.48)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo46" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(17772.5, 9341.12)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo47" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(20521.3, 10723.2)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo48" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(19604.8, 10261.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.7)
+texture = ExtResource("5_avpvg")
+
+[node name="ColorRect" type="ColorRect" parent="Suelos"]
+offset_left = -4170.0
+offset_top = 851.0
+offset_right = 19863.0
+offset_bottom = 3410.0
+color = Color(0.219608, 0.117647, 0.0509804, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_8m1lr")
+volume_db = -0.937
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_c64hj")
+volume_db = 24.0
 
 [connection signal="body_entered" from="RigidBody2D" to="StaticBody2D" method="_on_rigid_body_2d_body_entered"]
 [connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_entered"]

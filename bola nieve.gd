@@ -26,6 +26,7 @@ func _physics_process(delta):
 	linear_velocity.x = 400
 
 	if Input.is_action_just_pressed("ui_accept") and saltnum == 0:
+		$"../AudioStreamPlayer2".play()
 		saltnum = 1  # Evitar múltiples saltos"
 		
 		linear_velocity.y = -500

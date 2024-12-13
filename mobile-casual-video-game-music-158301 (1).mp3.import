@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ccas8kosfano2"
+path="res://.godot/imported/mobile-casual-video-game-music-158301 (1).mp3-ce6cd2c724aec81b509b8a9b99c81361.mp3str"
+
+[deps]
+
+source_file="res://mobile-casual-video-game-music-158301 (1).mp3"
+dest_files=["res://.godot/imported/mobile-casual-video-game-music-158301 (1).mp3-ce6cd2c724aec81b509b8a9b99c81361.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
