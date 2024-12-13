@@ -16,7 +16,7 @@ func _on_button_mouse_entered():
 
 
 func _on_button_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://mapa.tscn")
 
 
 func _on_button_2_pressed():

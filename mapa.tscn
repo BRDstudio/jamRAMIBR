@@ -1,12 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6vgiusb1c0lh"]
+[gd_scene load_steps=9 format=3 uid="uid://b6vgiusb1c0lh"]
 
 [ext_resource type="Texture2D" uid="uid://cxolu0mo18e5r" path="res://pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.jpg" id="1_emf8v"]
 [ext_resource type="Script" path="res://ramp.gd" id="2_1i0dr"]
 [ext_resource type="Texture2D" uid="uid://cbcs3dhx08amj" path="res://a-retro-styled-pixel-art-illustration-of-a-mini-snowball-free-png.png" id="3_4xvto"]
 [ext_resource type="Script" path="res://bola nieve.gd" id="3_cgn31"]
+[ext_resource type="Script" path="res://Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.gd" id="4_j52rl"]
+[ext_resource type="Texture2D" uid="uid://d1fdo1ogebqws" path="res://solo.jpg" id="5_avpvg"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yflds"]
-a = Vector2(1358, 580)
+a = Vector2(7912, 3880)
 b = Vector2(-141, -173)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ensss"]
@@ -14,9 +16,12 @@ radius = 35.0143
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector" type="Sprite2D" parent="."]
-position = Vector2(567, 171)
-texture = ExtResource("1_emf8v")
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -2709.0
+offset_top = -3679.0
+offset_right = 18631.0
+offset_bottom = 11005.0
+color = Color(0.449219, 0.75, 0.773438, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 script = ExtResource("2_1i0dr")
@@ -25,9 +30,67 @@ script = ExtResource("2_1i0dr")
 position = Vector2(142, 179)
 shape = SubResource("SegmentShape2D_yflds")
 
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2325, 674)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(632, -178)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1054, -1029)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7410.62, 3210.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector5" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(5717.62, 2358.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector6" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(4031.62, 1507.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -2410.0
+offset_top = -1214.0
+offset_right = 16144.0
+offset_bottom = 1754.0
+rotation = 0.466665
+
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 freeze_mode = 1
 script = ExtResource("3_cgn31")
+
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D"]
+position = Vector2(380, 98)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(378, 102)
@@ -38,10 +101,17 @@ position = Vector2(379, 101)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_4xvto")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1680.0
-offset_bottom = 560.0
-rotation = 0.466665
+[node name="Timer2" type="Timer" parent="RigidBody2D"]
+wait_time = 1.5
 
+[node name="Solo" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(224, 395)
+rotation = 0.464328
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_avpvg")
+
+[connection signal="body_entered" from="RigidBody2D" to="StaticBody2D" method="_on_rigid_body_2d_body_entered"]
 [connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_entered"]
 [connection signal="body_exited" from="RigidBody2D" to="RigidBody2D" method="_on_body_exited"]
+[connection signal="timeout" from="RigidBody2D/Timer2" to="RigidBody2D" method="_on_timer_2_timeout"]
