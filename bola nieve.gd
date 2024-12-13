@@ -1,4 +1,5 @@
 extends RigidBody2D
+class_name boliña
 
 var saltnum = 0
 
@@ -22,6 +23,8 @@ func _on_body_entered(body):
 	if body is rampiña:
 		saltnum = 0  # Reiniciar la posibilidad de saltar
 
+
+
 func _physics_process(delta):
 	linear_velocity.x = 400
 
@@ -44,3 +47,11 @@ func _on_timer_2_timeout():
 	linear_velocity.y = 0
 
 
+
+
+func _on_area_2d_area_entered(area):
+	if area is resrt:
+		print("rsdsg")
+		saltnum = 1
+		linear_velocity.y = -500
+		$Timer2.start()

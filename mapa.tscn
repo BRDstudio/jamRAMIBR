@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6vgiusb1c0lh"]
+[gd_scene load_steps=15 format=3 uid="uid://b6vgiusb1c0lh"]
 
 [ext_resource type="Texture2D" uid="uid://cxolu0mo18e5r" path="res://pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.jpg" id="1_emf8v"]
 [ext_resource type="Script" path="res://ramp.gd" id="2_1i0dr"]
@@ -8,20 +8,36 @@
 [ext_resource type="Texture2D" uid="uid://d1fdo1ogebqws" path="res://solo.jpg" id="5_avpvg"]
 [ext_resource type="AudioStream" uid="uid://bfp07jd3rviwc" path="res://Snow.mp3" id="7_8m1lr"]
 [ext_resource type="AudioStream" uid="uid://c7gsuxtf3kb2k" path="res://Jump.ogg" id="8_c64hj"]
+[ext_resource type="PackedScene" uid="uid://c8fgau32plefs" path="res://nevebole.tscn" id="9_rb2gv"]
+[ext_resource type="PackedScene" uid="uid://cejtrt167gcy3" path="res://resorteee.tscn" id="10_smc28"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yflds"]
 a = Vector2(7912, 3880)
 b = Vector2(-141, -173)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ensss"]
-radius = 35.0143
+radius = 44.0454
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rtfsm"]
 particle_flag_disable_z = true
 direction = Vector3(-20, -10, 0)
+gravity = Vector3(0, 98, 0)
 initial_velocity_min = 100.0
 initial_velocity_max = 100.0
-gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_max = 10.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_et7w1"]
+emission_shape = 3
+emission_box_extents = Vector3(10000, 1, 1)
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 100, 0)
+initial_velocity_min = 173.68
+initial_velocity_max = 173.68
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
 scale_max = 10.0
 
 [node name="Node2D" type="Node2D"]
@@ -95,6 +111,12 @@ offset_right = 16144.0
 offset_bottom = 1754.0
 rotation = 0.466665
 
+[node name="resort" type="Node2D" parent="."]
+
+[node name="Area2D2" parent="resort" instance=ExtResource("10_smc28")]
+position = Vector2(446, -71)
+rotation = 0.46388
+
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(-241, -73)
 freeze_mode = 1
@@ -104,7 +126,6 @@ script = ExtResource("3_cgn31")
 position = Vector2(380, 98)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-visible = false
 position = Vector2(378, 102)
 shape = SubResource("CircleShape2D_ensss")
 
@@ -122,6 +143,12 @@ amount = 20
 process_material = SubResource("ParticleProcessMaterial_rtfsm")
 lifetime = 2.0
 
+[node name="Area2D" type="Area2D" parent="RigidBody2D"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
+position = Vector2(378, 102)
+shape = SubResource("CircleShape2D_ensss")
+
 [node name="Suelos" type="Node2D" parent="."]
 position = Vector2(378.44, 465.363)
 rotation = 0.464328
@@ -129,338 +156,338 @@ scale = Vector2(0.788273, 0.5)
 
 [node name="Solo" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(368.327, 580.987)
+position = Vector2(350.269, 622.802)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo2" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(-548.113, 119.624)
+position = Vector2(-566.172, 161.439)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo3" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(2200.64, 1501.74)
+position = Vector2(2182.58, 1543.56)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo4" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(1284.2, 1040.37)
+position = Vector2(1266.14, 1082.19)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo5" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(4036.64, 2426.74)
+position = Vector2(4018.58, 2468.56)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo6" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(3120.2, 1965.37)
+position = Vector2(3102.14, 2007.19)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo7" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(5868.95, 3347.49)
+position = Vector2(5850.89, 3389.31)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo8" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(4952.51, 2886.12)
+position = Vector2(4934.45, 2927.94)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo9" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(7685.64, 4269.74)
+position = Vector2(7667.58, 4311.56)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo10" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(6769.2, 3808.37)
+position = Vector2(6751.14, 3850.19)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo11" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(9517.95, 5190.49)
+position = Vector2(9499.89, 5232.31)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo12" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(8601.51, 4729.12)
+position = Vector2(8583.45, 4770.94)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo13" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(11353.9, 6115.49)
+position = Vector2(11335.8, 6157.31)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo14" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(10437.5, 5654.12)
+position = Vector2(10419.4, 5695.94)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo15" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(13186.3, 7036.23)
+position = Vector2(13168.2, 7078.05)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo16" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(12269.8, 6574.87)
+position = Vector2(12251.7, 6616.69)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo17" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(-6956.36, -3108.26)
+position = Vector2(-6974.42, -3066.44)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo18" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(-7872.8, -3569.63)
+position = Vector2(-7890.86, -3527.81)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo19" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(-5124.05, -2187.51)
+position = Vector2(-5142.11, -2145.69)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo20" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(-6040.49, -2648.88)
+position = Vector2(-6058.55, -2607.06)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo21" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(-3288.05, -1262.51)
+position = Vector2(-3306.11, -1220.69)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo22" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(-4204.49, -1723.88)
+position = Vector2(-4222.55, -1682.06)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo23" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(-1455.74, -341.765)
+position = Vector2(-1473.8, -299.95)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo24" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(-2372.18, -803.128)
+position = Vector2(-2390.24, -761.313)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo25" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(22345.3, 11646)
+position = Vector2(22327.2, 11687.8)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo26" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(21428.9, 11184.6)
+position = Vector2(21410.8, 11226.4)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo27" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(24177.6, 12566.7)
+position = Vector2(24159.5, 12608.5)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo28" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(23261.2, 12105.4)
+position = Vector2(23243.1, 12147.2)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo29" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(26013.6, 13491.7)
+position = Vector2(25995.5, 13533.5)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo30" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(25097.2, 13030.4)
+position = Vector2(25079.1, 13072.2)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo31" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(27845.9, 14412.5)
+position = Vector2(27827.8, 14454.3)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo32" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(26929.5, 13951.1)
+position = Vector2(26911.4, 13992.9)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo33" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(29662.6, 15334.7)
+position = Vector2(29644.5, 15376.5)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo34" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(28746.2, 14873.4)
+position = Vector2(28728.1, 14915.2)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo35" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(31494.9, 16255.5)
+position = Vector2(31476.8, 16297.3)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo36" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(30578.5, 15794.1)
+position = Vector2(30560.4, 15835.9)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo37" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(33331, 17180.5)
+position = Vector2(33312.9, 17222.3)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo38" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(32414.5, 16719.1)
+position = Vector2(32396.4, 16760.9)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo39" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(35163.3, 18101.2)
+position = Vector2(35145.2, 18143)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo40" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(34246.8, 17639.9)
+position = Vector2(34228.7, 17681.7)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo41" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(15020.6, 7956.74)
+position = Vector2(15002.5, 7998.56)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo42" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(14104.2, 7495.37)
+position = Vector2(14086.1, 7537.19)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo43" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(16852.9, 8877.48)
+position = Vector2(16834.8, 8919.3)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo44" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(15936.5, 8416.12)
+position = Vector2(15918.4, 8457.94)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo45" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(18688.9, 9802.48)
+position = Vector2(18670.8, 9844.3)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo46" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(17772.5, 9341.12)
+position = Vector2(17754.4, 9382.94)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo47" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(20521.3, 10723.2)
+position = Vector2(20503.2, 10765)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo48" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(19604.8, 10261.9)
+position = Vector2(19586.7, 10303.7)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.7)
+scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="ColorRect" type="ColorRect" parent="Suelos"]
@@ -472,14 +499,31 @@ color = Color(0.219608, 0.117647, 0.0509804, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_8m1lr")
-volume_db = -0.937
+volume_db = -4.685
 autoplay = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_c64hj")
-volume_db = 24.0
+volume_db = 7.135
+
+[node name="bolasneve" type="Node2D" parent="."]
+
+[node name="Area2D" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(-603, -345)
+scale = Vector2(2, 2)
+
+[node name="rochas" type="Node2D" parent="."]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+top_level = true
+position = Vector2(-222, -605)
+amount = 2000
+process_material = SubResource("ParticleProcessMaterial_et7w1")
+lifetime = 14.08
+visibility_rect = Rect2(-10000, -100, 100000, 100000)
 
 [connection signal="body_entered" from="RigidBody2D" to="StaticBody2D" method="_on_rigid_body_2d_body_entered"]
 [connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_entered"]
 [connection signal="body_exited" from="RigidBody2D" to="RigidBody2D" method="_on_body_exited"]
 [connection signal="timeout" from="RigidBody2D/Timer2" to="RigidBody2D" method="_on_timer_2_timeout"]
+[connection signal="area_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_area_entered"]

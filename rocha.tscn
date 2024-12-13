@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://davndol8v8osn"]
+
+[ext_resource type="Texture2D" uid="uid://bqhcjl52taqgy" path="res://a-retro-styled-pixel-art-illustration-of-a-sharp-gray-rock-with-many-edges-and-bumps-png.png" id="1_3qv13"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_55516"]
+radius = 57.4131
+
+[node name="Area2D" type="Area2D"]
+
+[node name="A-retro-styled-pixel-art-illustration-of-a-sharp-gray-rock-with-many-edges-and-bumps-png" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(406, 242)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_3qv13")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(404, 249.875)
+shape = SubResource("CircleShape2D_55516")
