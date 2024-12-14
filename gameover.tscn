@@ -24,6 +24,7 @@ script = ExtResource("1_vm3ji")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
 offset_left = -255.0
 offset_top = -315.0
 offset_right = 225.0

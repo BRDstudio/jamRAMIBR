@@ -20,7 +20,7 @@ func _on_button_pressed():
 
 
 func _on_button_2_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://options.tscn")
 
 
 func _on_button_3_pressed():
