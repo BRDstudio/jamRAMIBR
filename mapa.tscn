@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://b6vgiusb1c0lh"]
+[gd_scene load_steps=38 format=3 uid="uid://b6vgiusb1c0lh"]
 
 [ext_resource type="Script" path="res://score.gd" id="1_7ykcn"]
 [ext_resource type="Texture2D" uid="uid://cxolu0mo18e5r" path="res://pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.jpg" id="1_emf8v"]
@@ -21,9 +21,12 @@
 [ext_resource type="FontFile" uid="uid://dbvou34hqrip7" path="res://PixelifySans-VariableFont_wght.ttf" id="18_4vjdr"]
 [ext_resource type="Texture2D" uid="uid://bnmautiqp378" path="res://fwafw.png" id="18_kdnxh"]
 [ext_resource type="Script" path="res://artut.gd" id="20_kaqp5"]
+[ext_resource type="FontFile" uid="uid://bhxd8g0irveup" path="res://SlacksideOne-Regular.ttf" id="22_20ehw"]
+[ext_resource type="Script" path="res://artp.gd" id="23_wtaut"]
+[ext_resource type="Texture2D" uid="uid://cw28ivtwro3ss" path="res://gvhfsf.png" id="24_bb3c3"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yflds"]
-a = Vector2(7912, 3880)
+a = Vector2(18152, 9041)
 b = Vector2(-2191, -1212)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ensss"]
@@ -32,19 +35,11 @@ radius = 63.0079
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rtfsm"]
 particle_flag_disable_z = true
 direction = Vector3(-20, -10, 0)
+gravity = Vector3(0, 98, 0)
 initial_velocity_min = 100.0
 initial_velocity_max = 100.0
-gravity = Vector3(0, 98, 0)
-scale_max = 10.0
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_et7w1"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(10000, 1, 1)
-direction = Vector3(0, 0, 0)
-initial_velocity_min = 173.68
-initial_velocity_max = 173.68
-gravity = Vector3(0, 100, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
 scale_max = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8rep"]
@@ -179,6 +174,53 @@ _data = {
 "new_animation": SubResource("Animation_7i0og")
 }
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_et7w1"]
+emission_shape = 3
+emission_box_extents = Vector3(10000, 1, 1)
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 100, 0)
+initial_velocity_min = 173.68
+initial_velocity_max = 173.68
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_max = 10.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqe2b"]
+size = Vector2(1287.35, 493)
+
+[sub_resource type="Animation" id="Animation_lyo64"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eeotd"]
+_data = {
+"new_animation": SubResource("Animation_lyo64")
+}
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7ykcn")
 
@@ -244,10 +286,58 @@ scale = Vector2(1, 1.002)
 texture = ExtResource("1_emf8v")
 script = ExtResource("4_j52rl")
 
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector7" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(12481.6, 5763.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector8" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(10788.6, 4911.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector9" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(9102.62, 4060.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector10" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(17552, 8312)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector11" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(15864, 7464)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector12" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(14176, 6616)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -2410.0
 offset_top = -1214.0
-offset_right = 16144.0
+offset_right = 22680.0
 offset_bottom = 1754.0
 rotation = 0.466665
 
@@ -255,6 +345,10 @@ rotation = 0.466665
 
 [node name="Area2D2" parent="resort" instance=ExtResource("10_smc28")]
 position = Vector2(2448, 936)
+rotation = 0.46388
+
+[node name="Area2D3" parent="resort" instance=ExtResource("10_smc28")]
+position = Vector2(3744, 1592)
 rotation = 0.46388
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
@@ -635,7 +729,7 @@ texture = ExtResource("5_avpvg")
 [node name="ColorRect" type="ColorRect" parent="Suelos"]
 offset_left = -4170.0
 offset_top = 851.0
-offset_right = 19863.0
+offset_right = 27590.0
 offset_bottom = 3410.0
 color = Color(0.219608, 0.117647, 0.0509804, 1)
 
@@ -645,15 +739,56 @@ top_level = true
 position = Vector2(2198, 826)
 rotation = 0.477694
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-process_mode = 3
-stream = ExtResource("7_8m1lr")
-volume_db = -4.685
-autoplay = true
+[node name="Node2D4" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(2712, 1088)
+rotation = 0.477694
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_c64hj")
-volume_db = 7.135
+[node name="Node2D5" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(3800, 1632)
+rotation = 0.477694
+
+[node name="Node2D6" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(4744, 2112)
+rotation = 0.477694
+
+[node name="Node2D7" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(6608, 3040)
+rotation = 0.477694
+
+[node name="rochas" type="Node2D" parent="."]
+
+[node name="Area2D" parent="rochas" instance=ExtResource("11_py1e7")]
+position = Vector2(1330, 617)
+rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="Area2D2" parent="rochas" instance=ExtResource("11_py1e7")]
+position = Vector2(3816, 1864)
+rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="Area2D3" parent="rochas" instance=ExtResource("11_py1e7")]
+position = Vector2(6720, 3328)
+rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="Area2D4" parent="rochas" instance=ExtResource("11_py1e7")]
+position = Vector2(4920, 2424)
+rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="Area2D5" parent="rochas" instance=ExtResource("11_py1e7")]
+position = Vector2(6000, 2960)
+rotation = 0.558299
+scale = Vector2(1, 1)
 
 [node name="bolasneve" type="Node2D" parent="."]
 
@@ -667,6 +802,42 @@ scale = Vector2(2, 2)
 
 [node name="Area2D3" parent="bolasneve" instance=ExtResource("9_rb2gv")]
 position = Vector2(-472, -280)
+scale = Vector2(2, 2)
+
+[node name="Area2D19" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(5256, 2600)
+scale = Vector2(2, 2)
+
+[node name="Area2D20" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(5323, 2633)
+scale = Vector2(2, 2)
+
+[node name="Area2D21" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(5387, 2665)
+scale = Vector2(2, 2)
+
+[node name="Area2D10" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(2440, 1176)
+scale = Vector2(2, 2)
+
+[node name="Area2D11" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(2507, 1209)
+scale = Vector2(2, 2)
+
+[node name="Area2D12" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(2571, 1241)
+scale = Vector2(2, 2)
+
+[node name="Area2D13" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(3688, 1792)
+scale = Vector2(2, 2)
+
+[node name="Area2D14" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(3755, 1825)
+scale = Vector2(2, 2)
+
+[node name="Area2D15" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(3819, 1857)
 scale = Vector2(2, 2)
 
 [node name="Area2D4" parent="bolasneve" instance=ExtResource("9_rb2gv")]
@@ -684,19 +855,325 @@ position = Vector2(3891, 976)
 rotation = -3.72976
 scale = Vector2(2, 2)
 
-[node name="rochas" type="Node2D" parent="."]
+[node name="Area2D7" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(5064, 1663)
+rotation = -3.72976
+scale = Vector2(2, 2)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="Area2D8" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(5120, 1639)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D9" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(5179, 1632)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D16" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(7632, 3079)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D17" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(7688, 3055)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D18" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(7747, 3048)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Node2D8" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
 top_level = true
-position = Vector2(-222, -605)
-amount = 2000
-process_material = SubResource("ParticleProcessMaterial_et7w1")
-lifetime = 14.08
-visibility_rect = Rect2(-10000, -100, 100000, 100000)
+position = Vector2(8278, 3890)
+rotation = 0.477694
 
-[node name="Area2D" parent="." instance=ExtResource("11_py1e7")]
+[node name="Node2D9" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(8792, 4152)
+rotation = 0.477694
+
+[node name="Node2D10" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(9880, 4696)
+rotation = 0.477694
+
+[node name="Node2D11" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(10824, 5176)
+rotation = 0.477694
+
+[node name="Node2D12" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(12688, 6104)
+rotation = 0.477694
+
+[node name="rochas2" type="Node2D" parent="."]
+position = Vector2(6080, 3064)
+
+[node name="Area2D" parent="rochas2" instance=ExtResource("11_py1e7")]
 position = Vector2(1330, 617)
 rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="Area2D2" parent="rochas2" instance=ExtResource("11_py1e7")]
+position = Vector2(3816, 1864)
+rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="Area2D3" parent="rochas2" instance=ExtResource("11_py1e7")]
+position = Vector2(6720, 3328)
+rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="Area2D4" parent="rochas2" instance=ExtResource("11_py1e7")]
+position = Vector2(4920, 2424)
+rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="Area2D5" parent="rochas2" instance=ExtResource("11_py1e7")]
+position = Vector2(6000, 2960)
+rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="bolasneve2" type="Node2D" parent="."]
+position = Vector2(6080, 3064)
+
+[node name="Area2D" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(-603, -345)
+scale = Vector2(2, 2)
+
+[node name="Area2D2" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(-536, -312)
+scale = Vector2(2, 2)
+
+[node name="Area2D3" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(-472, -280)
+scale = Vector2(2, 2)
+
+[node name="Area2D19" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(5256, 2600)
+scale = Vector2(2, 2)
+
+[node name="Area2D20" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(5323, 2633)
+scale = Vector2(2, 2)
+
+[node name="Area2D21" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(5387, 2665)
+scale = Vector2(2, 2)
+
+[node name="Area2D10" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(2440, 1176)
+scale = Vector2(2, 2)
+
+[node name="Area2D11" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(2507, 1209)
+scale = Vector2(2, 2)
+
+[node name="Area2D12" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(2571, 1241)
+scale = Vector2(2, 2)
+
+[node name="Area2D13" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(3688, 1792)
+scale = Vector2(2, 2)
+
+[node name="Area2D14" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(3755, 1825)
+scale = Vector2(2, 2)
+
+[node name="Area2D15" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(3819, 1857)
+scale = Vector2(2, 2)
+
+[node name="Area2D4" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(3776, 1007)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D5" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(3832, 983)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D6" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(3891, 976)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D7" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(5064, 1663)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D8" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(5120, 1639)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D9" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(5179, 1632)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D16" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(7632, 3079)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D17" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(7688, 3055)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D18" parent="bolasneve2" instance=ExtResource("9_rb2gv")]
+position = Vector2(7747, 3048)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Node2D13" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(15246, 7394)
+rotation = 0.477694
+
+[node name="Node2D14" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(15760, 7656)
+rotation = 0.477694
+
+[node name="Node2D15" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(16848, 8200)
+rotation = 0.477694
+
+[node name="Node2D17" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(19656, 9608)
+rotation = 0.477694
+
+[node name="rochas3" type="Node2D" parent="."]
+position = Vector2(13048, 6568)
+
+[node name="Area2D" parent="rochas3" instance=ExtResource("11_py1e7")]
+position = Vector2(1330, 617)
+rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="Area2D2" parent="rochas3" instance=ExtResource("11_py1e7")]
+position = Vector2(3816, 1864)
+rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="Area2D3" parent="rochas3" instance=ExtResource("11_py1e7")]
+position = Vector2(6720, 3328)
+rotation = 0.558299
+scale = Vector2(1, 1)
+
+[node name="bolasneve3" type="Node2D" parent="."]
+position = Vector2(13048, 6568)
+
+[node name="Area2D" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(-603, -345)
+scale = Vector2(2, 2)
+
+[node name="Area2D2" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(-536, -312)
+scale = Vector2(2, 2)
+
+[node name="Area2D3" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(-472, -280)
+scale = Vector2(2, 2)
+
+[node name="Area2D19" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(5256, 2600)
+scale = Vector2(2, 2)
+
+[node name="Area2D20" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(5323, 2633)
+scale = Vector2(2, 2)
+
+[node name="Area2D21" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(5387, 2665)
+scale = Vector2(2, 2)
+
+[node name="Area2D10" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(2440, 1176)
+scale = Vector2(2, 2)
+
+[node name="Area2D11" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(2507, 1209)
+scale = Vector2(2, 2)
+
+[node name="Area2D12" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(2571, 1241)
+scale = Vector2(2, 2)
+
+[node name="Area2D4" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(3776, 1007)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D5" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(3832, 983)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D6" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(3891, 976)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D7" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(5064, 1663)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D8" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(5120, 1639)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D9" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(5179, 1632)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D16" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(7632, 3079)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D17" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(7688, 3055)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D18" parent="bolasneve3" instance=ExtResource("9_rb2gv")]
+position = Vector2(7747, 3048)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("7_8m1lr")
+volume_db = -4.685
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_c64hj")
+volume_db = 7.135
 
 [node name="Node2D2" type="Node2D" parent="."]
 process_mode = 3
@@ -803,6 +1280,7 @@ script = ExtResource("20_kaqp5")
 position = Vector2(957, 279)
 rotation = 0.448573
 shape = SubResource("RectangleShape2D_glbsr")
+disabled = true
 
 [node name="SinTítulo" type="Sprite2D" parent="Node2D3"]
 top_level = true
@@ -832,7 +1310,7 @@ there are also
 obstacles that 
 can decrease 
 your snow mass
-Press space to 
+Click or space to 
 jump over them"
 
 [node name="Button" type="Button" parent="Node2D3"]
@@ -854,13 +1332,77 @@ libraries = {
 "": SubResource("AnimationLibrary_4h1il")
 }
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+top_level = true
+position = Vector2(-222, -605)
+amount = 2000
+process_material = SubResource("ParticleProcessMaterial_et7w1")
+lifetime = 14.08
+visibility_rect = Rect2(-10000, -100, 100000, 100000)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Label" type="Label" parent="."]
-offset_left = -696.0
-offset_top = -926.0
-offset_right = -508.0
-offset_bottom = -863.0
+offset_left = -146.0
+offset_top = -737.0
+offset_right = 42.0
+offset_bottom = -674.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("22_20ehw")
+theme_override_font_sizes/font_size = 64
+text = "Score"
+
+[node name="ColorRect" type="ColorRect" parent="Label"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -71.0
+offset_top = -45.0
+offset_right = 388.0
+offset_bottom = 109.0
+color = Color(1, 1, 1, 0.294118)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(17732.8, 8479.62)
+rotation = -1.04821
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-43.9004, 148.949)
+rotation = -0.515039
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_jqe2b")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("23_wtaut")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(17732.8, 8479.62)
+rotation = -1.04821
+shape = SubResource("RectangleShape2D_jqe2b")
+
+[node name="Gvhfsf" type="Sprite2D" parent="."]
+position = Vector2(17664, 8592)
+rotation = 0.471923
+scale = Vector2(2, 2)
+texture = ExtResource("24_bb3c3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gvhfsf"]
+libraries = {
+"": SubResource("AnimationLibrary_eeotd")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Gvhfsf"]
+top_level = true
+offset_left = 15112.0
+offset_top = 7016.0
+offset_right = 19880.0
+offset_bottom = 10064.0
+color = Color(0, 0, 0, 0)
 
 [connection signal="body_entered" from="RigidBody2D" to="StaticBody2D" method="_on_rigid_body_2d_body_entered"]
 [connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_entered"]
@@ -870,3 +1412,4 @@ offset_bottom = -863.0
 [connection signal="area_entered" from="RigidBody2D/Area2D" to="RigidBody2D/CollisionShape2D" method="_on_area_2d_area_entered"]
 [connection signal="pressed" from="Node2D2/Button" to="RigidBody2D" method="_on_button_pressed"]
 [connection signal="pressed" from="Node2D3/Button" to="RigidBody2D/CollisionShape2D" method="_on_button_pressed"]
+[connection signal="animation_finished" from="Gvhfsf/AnimationPlayer" to="RigidBody2D" method="_on_animation_player_animation_finished"]

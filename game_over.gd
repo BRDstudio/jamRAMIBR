@@ -3,8 +3,8 @@ extends Control
 
 func _ready():
 	$AudioStreamPlayer3.play()
-	
-	$Label.text = str(Score)
+	$Label2.text = "Total Score:" + str(Global.score)
+
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://mapa.tscn")
@@ -12,12 +12,7 @@ func _on_button_pressed():
 func _on_button_2_pressed():
 	get_tree().change_scene_to_file("res://node_2d.tscn")
 
-func _on_button_3_pressed() -> void:
-	if $Button3.text == "X":
-		$Button3.text = ""
-	else:
-		$Button3.text = "X"
-	print($Button3.text)
+
 
 
 func _on_button_mouse_entered():

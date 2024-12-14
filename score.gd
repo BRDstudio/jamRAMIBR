@@ -2,7 +2,7 @@ extends Node2D
 
 class_name Score  # Define un nombre de clase global (opcional).
 
-var score: int = 0  # Puntaje inicial.
+ # Puntaje inicial.
 var time_accumulated: float = 0.0  # Acumulador de tiempo.
 
 # Referencias a nodos
@@ -11,7 +11,7 @@ var time_accumulated: float = 0.0  # Acumulador de tiempo.
 
 func _ready():
 	# Configuramos el texto inicial del Label
-	score_label.text = "Score: " + str(score)
+	score_label.text = "Score: " + str(Global.score)
 	
 	# Activamos el procesamiento para actualizar la posición del Label
 	set_process(true)
@@ -23,8 +23,8 @@ func _process(delta: float):
 	# Si ha pasado 1 segundo, incrementamos el score y actualizamos el texto
 	if time_accumulated >= 1.0:
 		time_accumulated = 0.0  # Reiniciamos el contador
-		score += 1  # Incrementamos el puntaje
-		score_label.text = "Score: " + str(score)  # Actualizamos el texto del Label
+		Global.score += 10  # Incrementamos el puntaje
+		score_label.text = "Score: " + str(Global.score)  # Actualizamos el texto del Label
 	
 	# Ajusta la posición del Label a la esquina de la cámara
-	score_label.position = camera.global_position - camera.offset + Vector2(10, 10)
+	score_label.position = camera.global_position - camera.offset + Vector2(600, -490)
