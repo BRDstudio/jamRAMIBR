@@ -15,8 +15,9 @@ var constant_speed = 200  # Ajusta el valor de la velocidad
 # Dirección de movimiento
 var direction = Vector2(1, 0)  # Movimiento hacia la derecha (ajústalo según necesites)
 
-
-
+func _ready():
+	get_tree().paused = false
+	$"../Node2D2".visible = false
 
 func _on_body_entered(body):
 	linear_velocity = direction.normalized() * constant_speed
@@ -51,11 +52,35 @@ func _on_timer_2_timeout():
 
 func _on_area_2d_area_entered(area):
 	if area is resrt:
-		print("rsdsg")
 		saltnum = 1
 		linear_velocity.y = -500
 		$Timer2.start()
-
+	if area is rochiña:
+		saltnum = 1
+		linear_velocity.y = -500
+		$Timer2.start()
+	if area is troncmiguel:
+		saltnum = 1
+		linear_velocity.y = -500
+		$Timer2.start()
+	if area is tituareas:
+		get_tree().paused = true
+		$"../Node2D2".visible = true
+		$"../Node2D2/AnimationPlayer".play("new_animation")
+		$"../GPUParticles2D".emitting = false
+		$"../GPUParticles2D".visible = false
+	if area is enemtut:
+		get_tree().paused = true
+		$"../Node2D3".visible = true
+		$"../Node2D3/AnimationPlayer".play("new_animation")
+		$"../GPUParticles2D".visible = false
 
 func _on_area_2d_2_area_entered(area: Area2D) -> void:
 	pass # Replace with function body.
+
+
+func _on_button_pressed():
+	$"../GPUParticles2D".emitting = true
+	$"../Node2D2".visible = false
+	$"../GPUParticles2D".visible = true
+	get_tree().paused = false

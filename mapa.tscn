@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b6vgiusb1c0lh"]
+[gd_scene load_steps=31 format=3 uid="uid://b6vgiusb1c0lh"]
 
 [ext_resource type="Texture2D" uid="uid://cxolu0mo18e5r" path="res://pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.jpg" id="1_emf8v"]
 [ext_resource type="Script" path="res://ramp.gd" id="2_1i0dr"]
@@ -8,37 +8,179 @@
 [ext_resource type="Texture2D" uid="uid://d1fdo1ogebqws" path="res://solo.jpg" id="5_avpvg"]
 [ext_resource type="Script" path="res://pequeñoarea.gd" id="6_b8w5m"]
 [ext_resource type="AudioStream" uid="uid://bfp07jd3rviwc" path="res://Snow.mp3" id="7_8m1lr"]
-[ext_resource type="Script" path="res://pequeñito.gd" id="7_t4qgk"]
 [ext_resource type="AudioStream" uid="uid://c7gsuxtf3kb2k" path="res://Jump.ogg" id="8_c64hj"]
+[ext_resource type="Script" path="res://arebole.gd" id="8_cgxaa"]
 [ext_resource type="PackedScene" uid="uid://c8fgau32plefs" path="res://nevebole.tscn" id="9_rb2gv"]
 [ext_resource type="PackedScene" uid="uid://cejtrt167gcy3" path="res://resorteee.tscn" id="10_smc28"]
 [ext_resource type="PackedScene" uid="uid://davndol8v8osn" path="res://rocha.tscn" id="11_py1e7"]
 [ext_resource type="PackedScene" uid="uid://ddm0m3iqmihg8" path="res://tronco.tscn" id="14_t28gj"]
+[ext_resource type="Script" path="res://tutiarea.gd" id="15_cfink"]
+[ext_resource type="Texture2D" uid="uid://k62058fkjbr" path="res://6.png" id="16_a6qwb"]
+[ext_resource type="Texture2D" uid="uid://bo3dyfryy4r2w" path="res://Sin título.png" id="17_sig58"]
+[ext_resource type="FontFile" uid="uid://dbvou34hqrip7" path="res://PixelifySans-VariableFont_wght.ttf" id="18_4vjdr"]
+[ext_resource type="Texture2D" uid="uid://bnmautiqp378" path="res://fwafw.png" id="18_kdnxh"]
+[ext_resource type="Script" path="res://artut.gd" id="20_kaqp5"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yflds"]
 a = Vector2(7912, 3880)
 b = Vector2(-2191, -1212)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ensss"]
-radius = 44.0454
+radius = 63.0079
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rtfsm"]
 particle_flag_disable_z = true
 direction = Vector3(-20, -10, 0)
+gravity = Vector3(0, 98, 0)
 initial_velocity_min = 100.0
 initial_velocity_max = 100.0
-gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
 scale_max = 10.0
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_et7w1"]
-particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(10000, 1, 1)
+particle_flag_disable_z = true
 direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 100, 0)
 initial_velocity_min = 173.68
 initial_velocity_max = 173.68
-gravity = Vector3(0, 100, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
 scale_max = 10.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8rep"]
+size = Vector2(58, 226)
+
+[sub_resource type="Animation" id="Animation_ekhph"]
+resource_name = "new_animation"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("6:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SinTítulo:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-2.8, 2.8), Vector2(-2.5, 2.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Button:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gf2dm"]
+_data = {
+"new_animation": SubResource("Animation_ekhph")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glbsr"]
+size = Vector2(95, 385.966)
+
+[sub_resource type="Animation" id="Animation_7i0og"]
+resource_name = "new_animation"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SinTítulo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-2.8, 2.8), Vector2(-2.65, 2.65)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Button:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4h1il"]
+_data = {
+"new_animation": SubResource("Animation_7i0og")
+}
 
 [node name="Node2D" type="Node2D"]
 
@@ -114,11 +256,11 @@ rotation = 0.466665
 [node name="resort" type="Node2D" parent="."]
 
 [node name="Area2D2" parent="resort" instance=ExtResource("10_smc28")]
-position = Vector2(446, -71)
+position = Vector2(2448, 936)
 rotation = 0.46388
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(-681, -383)
+position = Vector2(-1388, -748)
 freeze_mode = 1
 script = ExtResource("3_cgn31")
 
@@ -127,14 +269,14 @@ position = Vector2(380, 98)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(378, 102)
+scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_ensss")
 script = ExtResource("6_b8w5m")
 
-[node name="A-retro-styled-pixel-art-illustration-of-a-mini-snowball-free-png" type="Sprite2D" parent="RigidBody2D"]
-position = Vector2(379, 101)
-scale = Vector2(0.4, 0.4)
+[node name="A-retro-styled-pixel-art-illustration-of-a-mini-snowball-free-png" type="Sprite2D" parent="RigidBody2D/CollisionShape2D"]
+position = Vector2(1, -1)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_4xvto")
-script = ExtResource("7_t4qgk")
 
 [node name="Timer2" type="Timer" parent="RigidBody2D"]
 wait_time = 1.5
@@ -146,6 +288,7 @@ process_material = SubResource("ParticleProcessMaterial_rtfsm")
 lifetime = 2.0
 
 [node name="Area2D" type="Area2D" parent="RigidBody2D"]
+script = ExtResource("8_cgxaa")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
 position = Vector2(378, 102)
@@ -499,7 +642,14 @@ offset_right = 19863.0
 offset_bottom = 3410.0
 color = Color(0.219608, 0.117647, 0.0509804, 1)
 
+[node name="Node2D" parent="." instance=ExtResource("14_t28gj")]
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
+top_level = true
+position = Vector2(2198, 826)
+rotation = 0.477694
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("7_8m1lr")
 volume_db = -4.685
 autoplay = true
@@ -512,6 +662,29 @@ volume_db = 7.135
 
 [node name="Area2D" parent="bolasneve" instance=ExtResource("9_rb2gv")]
 position = Vector2(-603, -345)
+scale = Vector2(2, 2)
+
+[node name="Area2D2" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(-536, -312)
+scale = Vector2(2, 2)
+
+[node name="Area2D3" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(-472, -280)
+scale = Vector2(2, 2)
+
+[node name="Area2D4" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(3776, 1007)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D5" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(3832, 983)
+rotation = -3.72976
+scale = Vector2(2, 2)
+
+[node name="Area2D6" parent="bolasneve" instance=ExtResource("9_rb2gv")]
+position = Vector2(3891, 976)
+rotation = -3.72976
 scale = Vector2(2, 2)
 
 [node name="rochas" type="Node2D" parent="."]
@@ -528,12 +701,170 @@ visibility_rect = Rect2(-10000, -100, 100000, 100000)
 position = Vector2(1330, 617)
 rotation = 0.558299
 
-[node name="Node2D" parent="." instance=ExtResource("14_t28gj")]
-position = Vector2(2149, 1066)
-rotation = -0.276713
+[node name="Node2D2" type="Node2D" parent="."]
+process_mode = 3
+visible = false
+
+[node name="Area2D" type="Area2D" parent="Node2D2"]
+script = ExtResource("15_cfink")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Area2D"]
+position = Vector2(-47, -141)
+rotation = 0.495498
+shape = SubResource("RectangleShape2D_w8rep")
+
+[node name="6" type="Sprite2D" parent="Node2D2"]
+self_modulate = Color(1, 1, 1, 0.643137)
+top_level = true
+texture_filter = 1
+position = Vector2(360, 128)
+rotation = 8.77259e-05
+scale = Vector2(7, 7)
+texture = ExtResource("16_a6qwb")
+
+[node name="7" type="Sprite2D" parent="Node2D2/6"]
+self_modulate = Color(1, 1, 1, 0.643137)
+top_level = true
+texture_filter = 1
+position = Vector2(360, 128)
+rotation = 8.77259e-05
+scale = Vector2(7, 7)
+texture = ExtResource("16_a6qwb")
+
+[node name="SinTítulo" type="Sprite2D" parent="Node2D2"]
+top_level = true
+texture_filter = 1
+position = Vector2(542, -154)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("17_sig58")
+
+[node name="Fwafw" type="Sprite2D" parent="Node2D2/SinTítulo"]
+texture_filter = 1
+position = Vector2(-5.59998, 72)
+rotation = 3.14159
+scale = Vector2(0.4, -0.4)
+texture = ExtResource("18_kdnxh")
+
+[node name="Button" type="Button" parent="Node2D2"]
+top_level = true
+offset_left = 496.0
+offset_top = -7.0
+offset_right = 628.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("18_4vjdr")
+theme_override_font_sizes/font_size = 48
+text = "Ok"
+flat = true
+
+[node name="Label" type="Label" parent="Node2D2"]
+top_level = true
+offset_left = 391.0
+offset_top = -310.0
+offset_right = 1045.0
+offset_bottom = -22.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_4vjdr")
+theme_override_font_sizes/font_size = 36
+text = "Falling down the 
+mountain makes 
+you smaller, so 
+you must get 
+snow to grow."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2"]
+libraries = {
+"": SubResource("AnimationLibrary_gf2dm")
+}
+
+[node name="Node2D3" type="Node2D" parent="."]
+process_mode = 3
+visible = false
+
+[node name="6" type="Sprite2D" parent="Node2D3"]
+self_modulate = Color(1, 1, 1, 0.643137)
+top_level = true
+texture_filter = 1
+position = Vector2(1362, 624)
+rotation = 8.77259e-05
+scale = Vector2(7, 7)
+texture = ExtResource("16_a6qwb")
+
+[node name="7" type="Sprite2D" parent="Node2D3/6"]
+self_modulate = Color(1, 1, 1, 0.643137)
+top_level = true
+texture_filter = 1
+position = Vector2(1362, 624)
+rotation = 8.77259e-05
+scale = Vector2(7, 7)
+texture = ExtResource("16_a6qwb")
+
+[node name="Area2D" type="Area2D" parent="Node2D3"]
+script = ExtResource("20_kaqp5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D3/Area2D"]
+position = Vector2(957, 279)
+rotation = 0.448573
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_glbsr")
+
+[node name="SinTítulo" type="Sprite2D" parent="Node2D3"]
+top_level = true
+texture_filter = 1
+position = Vector2(1530, 354)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("17_sig58")
+
+[node name="Fwafw" type="Sprite2D" parent="Node2D3/SinTítulo"]
+texture_filter = 1
+position = Vector2(-9, 76.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_kdnxh")
+
+[node name="Label" type="Label" parent="Node2D3"]
+top_level = true
+offset_left = 1377.0
+offset_top = 148.0
+offset_right = 1949.0
+offset_bottom = 484.0
+scale = Vector2(1e-05, 1e-05)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_4vjdr")
+theme_override_font_sizes/font_size = 36
+text = "But be careful,
+there are also
+obstacles that 
+can decrease 
+your snow mass
+Press space to 
+jump over them"
+
+[node name="Button" type="Button" parent="Node2D3"]
+process_mode = 3
+top_level = true
+offset_left = 1472.0
+offset_top = 504.0
+offset_right = 1622.0
+offset_bottom = 589.0
+scale = Vector2(1e-05, 1e-05)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("18_4vjdr")
+theme_override_font_sizes/font_size = 64
+text = "Ok"
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D3"]
+libraries = {
+"": SubResource("AnimationLibrary_4h1il")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [connection signal="body_entered" from="RigidBody2D" to="StaticBody2D" method="_on_rigid_body_2d_body_entered"]
 [connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_entered"]
 [connection signal="body_exited" from="RigidBody2D" to="RigidBody2D" method="_on_body_exited"]
 [connection signal="timeout" from="RigidBody2D/Timer2" to="RigidBody2D" method="_on_timer_2_timeout"]
 [connection signal="area_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="RigidBody2D/Area2D" to="RigidBody2D/CollisionShape2D" method="_on_area_2d_area_entered"]
+[connection signal="pressed" from="Node2D2/Button" to="RigidBody2D" method="_on_button_pressed"]
+[connection signal="pressed" from="Node2D3/Button" to="RigidBody2D/CollisionShape2D" method="_on_button_pressed"]

@@ -4,6 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://b3tnkcn6ow0jb" path="res://Jump (28x28).png" id="2_exwk3"]
 [ext_resource type="AudioStream" uid="uid://8a6wmjm1lcsu" path="res://springboard-b-92439.mp3" id="3_47j8v"]
 
+[sub_resource type="Animation" id="Animation_q7byj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jump(28x28):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_vu0fq"]
 resource_name = "new_animation"
 length = 0.9
@@ -20,21 +35,6 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
-[sub_resource type="Animation" id="Animation_q7byj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Jump(28x28):frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fsjn3"]
 _data = {
 "RESET": SubResource("Animation_q7byj"),
@@ -42,7 +42,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r7rk3"]
-size = Vector2(65, 98)
+size = Vector2(65, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kys06"]
 size = Vector2(38.6768, 16)
@@ -66,7 +66,7 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(379.5, 220)
+position = Vector2(379.5, 241.5)
 shape = SubResource("RectangleShape2D_r7rk3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -78,13 +78,11 @@ volume_db = 4.379
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(277.633, 256.724)
 rotation = -0.511391
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_kys06")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(361.668, 257)
 rotation = 0.00323057
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_u17nd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

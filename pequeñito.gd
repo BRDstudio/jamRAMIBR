@@ -3,7 +3,7 @@ extends Sprite2D
 # Variables para el contador y el tamaño
 var contador: int = 10
 var tamaño_inicial: Vector2
-var decrecimiento: float = 0.1
+var decrecimiento: float = 0.05
 var tiempo: float = 0.0
 
 func _ready():
