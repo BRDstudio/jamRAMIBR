@@ -1,18 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://davndol8v8osn"]
+[gd_scene load_steps=4 format=3 uid="uid://davndol8v8osn"]
 
 [ext_resource type="Texture2D" uid="uid://bqhcjl52taqgy" path="res://a-retro-styled-pixel-art-illustration-of-a-sharp-gray-rock-with-many-edges-and-bumps-png.png" id="1_3qv13"]
+[ext_resource type="Script" path="res://rocha.gd" id="1_d7ysb"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_55516"]
-radius = 57.4131
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_21yxn"]
+radius = 40.0
+height = 122.0
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_d7ysb")
 
 [node name="A-retro-styled-pixel-art-illustration-of-a-sharp-gray-rock-with-many-edges-and-bumps-png" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(406, 242)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_3qv13")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(404, 249.875)
-shape = SubResource("CircleShape2D_55516")
+position = Vector2(-20, 11)
+shape = SubResource("CapsuleShape2D_21yxn")

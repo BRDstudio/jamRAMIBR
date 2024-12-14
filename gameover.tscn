@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://wxmh51x587mc"]
+
+[ext_resource type="Script" path="res://gameover.gd" id="1_vm3ji"]
+[ext_resource type="VideoStream" path="res://game-over-game.ogv" id="2_8tis8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -511.0
+offset_top = 53.0
+offset_right = -334.0
+offset_bottom = 84.0
+scale = Vector2(5.9028, 8.62513)
+text = "Game over puto noob"
+script = ExtResource("1_vm3ji")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -255.0
+offset_top = -315.0
+offset_right = 225.0
+offset_bottom = -11.0
+stream = ExtResource("2_8tis8")
+autoplay = true
+loop = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b6vgiusb1c0lh"]
+[gd_scene load_steps=19 format=3 uid="uid://b6vgiusb1c0lh"]
 
 [ext_resource type="Texture2D" uid="uid://cxolu0mo18e5r" path="res://pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.jpg" id="1_emf8v"]
 [ext_resource type="Script" path="res://ramp.gd" id="2_1i0dr"]
@@ -6,14 +6,18 @@
 [ext_resource type="Script" path="res://bola nieve.gd" id="3_cgn31"]
 [ext_resource type="Script" path="res://Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.gd" id="4_j52rl"]
 [ext_resource type="Texture2D" uid="uid://d1fdo1ogebqws" path="res://solo.jpg" id="5_avpvg"]
+[ext_resource type="Script" path="res://pequeñoarea.gd" id="6_b8w5m"]
 [ext_resource type="AudioStream" uid="uid://bfp07jd3rviwc" path="res://Snow.mp3" id="7_8m1lr"]
+[ext_resource type="Script" path="res://pequeñito.gd" id="7_t4qgk"]
 [ext_resource type="AudioStream" uid="uid://c7gsuxtf3kb2k" path="res://Jump.ogg" id="8_c64hj"]
 [ext_resource type="PackedScene" uid="uid://c8fgau32plefs" path="res://nevebole.tscn" id="9_rb2gv"]
 [ext_resource type="PackedScene" uid="uid://cejtrt167gcy3" path="res://resorteee.tscn" id="10_smc28"]
+[ext_resource type="PackedScene" uid="uid://davndol8v8osn" path="res://rocha.tscn" id="11_py1e7"]
+[ext_resource type="PackedScene" uid="uid://ddm0m3iqmihg8" path="res://tronco.tscn" id="14_t28gj"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yflds"]
 a = Vector2(7912, 3880)
-b = Vector2(-141, -173)
+b = Vector2(-2191, -1212)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ensss"]
 radius = 44.0454
@@ -21,23 +25,19 @@ radius = 44.0454
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rtfsm"]
 particle_flag_disable_z = true
 direction = Vector3(-20, -10, 0)
-gravity = Vector3(0, 98, 0)
 initial_velocity_min = 100.0
 initial_velocity_max = 100.0
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 98, 0)
 scale_max = 10.0
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_et7w1"]
+particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(10000, 1, 1)
-particle_flag_disable_z = true
 direction = Vector3(0, 0, 0)
-gravity = Vector3(0, 100, 0)
 initial_velocity_min = 173.68
 initial_velocity_max = 173.68
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 100, 0)
 scale_max = 10.0
 
 [node name="Node2D" type="Node2D"]
@@ -53,7 +53,7 @@ color = Color(0.449219, 0.75, 0.773438, 1)
 script = ExtResource("2_1i0dr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(142, 179)
+position = Vector2(96, 159)
 shape = SubResource("SegmentShape2D_yflds")
 
 [node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector2" type="Sprite2D" parent="."]
@@ -118,7 +118,7 @@ position = Vector2(446, -71)
 rotation = 0.46388
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(-241, -73)
+position = Vector2(-681, -383)
 freeze_mode = 1
 script = ExtResource("3_cgn31")
 
@@ -128,11 +128,13 @@ position = Vector2(380, 98)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(378, 102)
 shape = SubResource("CircleShape2D_ensss")
+script = ExtResource("6_b8w5m")
 
 [node name="A-retro-styled-pixel-art-illustration-of-a-mini-snowball-free-png" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(379, 101)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_4xvto")
+script = ExtResource("7_t4qgk")
 
 [node name="Timer2" type="Timer" parent="RigidBody2D"]
 wait_time = 1.5
@@ -521,6 +523,14 @@ amount = 2000
 process_material = SubResource("ParticleProcessMaterial_et7w1")
 lifetime = 14.08
 visibility_rect = Rect2(-10000, -100, 100000, 100000)
+
+[node name="Area2D" parent="." instance=ExtResource("11_py1e7")]
+position = Vector2(1330, 617)
+rotation = 0.558299
+
+[node name="Node2D" parent="." instance=ExtResource("14_t28gj")]
+position = Vector2(2149, 1066)
+rotation = -0.276713
 
 [connection signal="body_entered" from="RigidBody2D" to="StaticBody2D" method="_on_rigid_body_2d_body_entered"]
 [connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_entered"]

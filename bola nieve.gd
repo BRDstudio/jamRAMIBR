@@ -55,3 +55,7 @@ func _on_area_2d_area_entered(area):
 		saltnum = 1
 		linear_velocity.y = -500
 		$Timer2.start()
+
+
+func _on_area_2d_2_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
