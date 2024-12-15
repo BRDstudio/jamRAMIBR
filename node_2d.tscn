@@ -1,11 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://d3nibbd7rokud"]
+[gd_scene load_steps=10 format=3 uid="uid://d3nibbd7rokud"]
 
 [ext_resource type="VideoStream" path="res://191443-890121806_small.ogv" id="1_6dqn5"]
 [ext_resource type="Script" path="res://menuuu.gd" id="1_6j0j0"]
 [ext_resource type="Script" path="res://vidmen.gd" id="2_0qa4y"]
-[ext_resource type="FontFile" uid="uid://s0k1wkv1vjit" path="res://RubikGlitch-Regular.ttf" id="3_6qqwd"]
 [ext_resource type="FontFile" uid="uid://mapb028hnase" path="res://Modak-Regular.ttf" id="3_c04dp"]
-[ext_resource type="Script" path="res://Label2.gd" id="4_ks3eq"]
 [ext_resource type="AudioStream" uid="uid://bit3hj3rndqgp" path="res://Game jam.mp3" id="4_x57u5"]
 [ext_resource type="AudioStream" uid="uid://cupip4ddwhj0j" path="res://1212_1_.ogg" id="6_llm6w"]
 [ext_resource type="FontFile" uid="uid://bhxd8g0irveup" path="res://SlacksideOne-Regular.ttf" id="7_r0nmc"]
@@ -81,22 +79,6 @@ theme_override_constants/line_spacing = 8
 theme_override_fonts/font = ExtResource("3_c04dp")
 theme_override_font_sizes/font_size = 196
 text = "Slow kills Snow"
-
-[node name="Label2" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 120.0
-offset_top = 730.0
-offset_right = 2103.0
-offset_bottom = 1042.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
-theme_override_constants/shadow_offset_x = 16
-theme_override_constants/line_spacing = 8
-theme_override_fonts/font = ExtResource("3_6qqwd")
-theme_override_font_sizes/font_size = 196
-text = "The  Main  Lines"
-script = ExtResource("4_ks3eq")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_x57u5")

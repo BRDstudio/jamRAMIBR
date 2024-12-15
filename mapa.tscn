@@ -108,6 +108,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label2:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gf2dm"]
 _data = {
@@ -167,6 +179,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label2:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.2, 0), Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4h1il"]
@@ -2172,7 +2196,6 @@ volume_db = 7.135
 
 [node name="Node2D2" type="Node2D" parent="."]
 process_mode = 3
-visible = false
 
 [node name="Area2D" type="Area2D" parent="Node2D2"]
 script = ExtResource("15_cfink")
@@ -2181,6 +2204,7 @@ script = ExtResource("15_cfink")
 position = Vector2(-47, -141)
 rotation = 0.495498
 shape = SubResource("RectangleShape2D_w8rep")
+disabled = true
 
 [node name="6" type="Sprite2D" parent="Node2D2"]
 self_modulate = Color(1, 1, 1, 0.643137)
@@ -2204,7 +2228,7 @@ texture = ExtResource("16_a6qwb")
 top_level = true
 texture_filter = 1
 position = Vector2(542, -154)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(-2.5, 2.5)
 texture = ExtResource("17_sig58")
 
 [node name="Fwafw" type="Sprite2D" parent="Node2D2/SinTítulo"]
@@ -2228,6 +2252,7 @@ text = "Ok"
 flat = true
 
 [node name="Label" type="Label" parent="Node2D2"]
+visible = false
 top_level = true
 offset_left = 391.0
 offset_top = -310.0
@@ -2242,6 +2267,22 @@ you smaller, so
 you must get 
 snow to grow."
 
+[node name="Label2" type="Label" parent="Node2D2"]
+top_level = true
+offset_left = 400.0
+offset_top = -312.0
+offset_right = 1054.0
+offset_bottom = -24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_4vjdr")
+theme_override_font_sizes/font_size = 30
+text = "Cuanto más 
+ruedas,
+más pequeño 
+te haces así que
+tienes que coger
+nieve para crecer."
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2"]
 libraries = {
 "": SubResource("AnimationLibrary_gf2dm")
@@ -2249,6 +2290,7 @@ libraries = {
 
 [node name="Node2D3" type="Node2D" parent="."]
 process_mode = 3
+visible = false
 
 [node name="6" type="Sprite2D" parent="Node2D3"]
 self_modulate = Color(1, 1, 1, 0.643137)
@@ -2275,12 +2317,13 @@ script = ExtResource("20_kaqp5")
 position = Vector2(957, 279)
 rotation = 0.448573
 shape = SubResource("RectangleShape2D_glbsr")
+disabled = true
 
 [node name="SinTítulo" type="Sprite2D" parent="Node2D3"]
 top_level = true
 texture_filter = 1
 position = Vector2(1530, 354)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(-2.65, 2.65)
 texture = ExtResource("17_sig58")
 
 [node name="Fwafw" type="Sprite2D" parent="Node2D3/SinTítulo"]
@@ -2291,14 +2334,13 @@ texture = ExtResource("18_kdnxh")
 
 [node name="Label" type="Label" parent="Node2D3"]
 top_level = true
-offset_left = 1377.0
-offset_top = 148.0
-offset_right = 1949.0
-offset_bottom = 484.0
-scale = Vector2(1e-05, 1e-05)
+offset_left = 1384.0
+offset_top = 160.0
+offset_right = 1956.0
+offset_bottom = 496.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("18_4vjdr")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 34
 text = "But be careful,
 there are also
 obstacles that 
@@ -2307,6 +2349,23 @@ your snow mass
 Click or space to 
 jump over them"
 
+[node name="Label2" type="Label" parent="Node2D3"]
+top_level = true
+offset_left = 1376.0
+offset_top = 176.0
+offset_right = 1948.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_4vjdr")
+theme_override_font_sizes/font_size = 30
+text = "Pero ten cuidado,
+tambien hay
+obstaculos que
+pueden reducir 
+tu masa de nieve.
+Click o espacio para
+saltar sobre ellos."
+
 [node name="Button" type="Button" parent="Node2D3"]
 process_mode = 3
 top_level = true
@@ -2314,7 +2373,6 @@ offset_left = 1472.0
 offset_top = 504.0
 offset_right = 1622.0
 offset_bottom = 589.0
-scale = Vector2(1e-05, 1e-05)
 focus_mode = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("18_4vjdr")

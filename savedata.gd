@@ -10,5 +10,6 @@ static func load_or_create() -> SaveData:
 	if FileAccess.file_exists(SAVE_PATH):
 		res = load(SAVE_PATH) as SaveData
 	else:
+		TranslationServer.set_locale("en")
 		res = SaveData.new()
 	return res
