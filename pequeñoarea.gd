@@ -29,6 +29,9 @@ func update_size():
 	scale = tamaño_inicial * (contador / 10.0)  # Ajusta el divisor según el valor máximo del contador
 	if scale < Vector2(0.1, 0.1):
 		get_tree().change_scene_to_file("res://game_over.tscn")
+		
+		Global.score = 0
+		
 
 func _on_area_2d_area_entered(area):
 	if area is nevebvoleeeee:

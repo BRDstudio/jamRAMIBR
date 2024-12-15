@@ -53,7 +53,7 @@ func _on_body_exited(body):
 
 func _on_timer_2_timeout():
 	saltnum = 0
-	linear_velocity.y = 0
+	linear_velocity.y = 500
 
 
 

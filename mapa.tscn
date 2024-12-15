@@ -35,11 +35,9 @@ radius = 63.0079
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rtfsm"]
 particle_flag_disable_z = true
 direction = Vector3(-20, -10, 0)
-gravity = Vector3(0, 98, 0)
 initial_velocity_min = 100.0
 initial_velocity_max = 100.0
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 98, 0)
 scale_max = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8rep"]
@@ -175,15 +173,13 @@ _data = {
 }
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_et7w1"]
+particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(10000, 1, 1)
-particle_flag_disable_z = true
 direction = Vector3(0, 0, 0)
-gravity = Vector3(0, 100, 0)
 initial_velocity_min = 173.68
 initial_velocity_max = 173.68
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 100, 0)
 scale_max = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqe2b"]
@@ -768,27 +764,22 @@ rotation = 0.477694
 [node name="Area2D" parent="rochas" instance=ExtResource("11_py1e7")]
 position = Vector2(1330, 617)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="Area2D2" parent="rochas" instance=ExtResource("11_py1e7")]
 position = Vector2(3816, 1864)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="Area2D3" parent="rochas" instance=ExtResource("11_py1e7")]
 position = Vector2(6720, 3328)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="Area2D4" parent="rochas" instance=ExtResource("11_py1e7")]
 position = Vector2(4920, 2424)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="Area2D5" parent="rochas" instance=ExtResource("11_py1e7")]
 position = Vector2(6000, 2960)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="bolasneve" type="Node2D" parent="."]
 
@@ -921,27 +912,22 @@ position = Vector2(6080, 3064)
 [node name="Area2D" parent="rochas2" instance=ExtResource("11_py1e7")]
 position = Vector2(1330, 617)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="Area2D2" parent="rochas2" instance=ExtResource("11_py1e7")]
 position = Vector2(3816, 1864)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="Area2D3" parent="rochas2" instance=ExtResource("11_py1e7")]
 position = Vector2(6720, 3328)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="Area2D4" parent="rochas2" instance=ExtResource("11_py1e7")]
 position = Vector2(4920, 2424)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="Area2D5" parent="rochas2" instance=ExtResource("11_py1e7")]
 position = Vector2(6000, 2960)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="bolasneve2" type="Node2D" parent="."]
 position = Vector2(6080, 3064)
@@ -1069,17 +1055,14 @@ position = Vector2(13048, 6568)
 [node name="Area2D" parent="rochas3" instance=ExtResource("11_py1e7")]
 position = Vector2(1330, 617)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="Area2D2" parent="rochas3" instance=ExtResource("11_py1e7")]
 position = Vector2(3816, 1864)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="Area2D3" parent="rochas3" instance=ExtResource("11_py1e7")]
 position = Vector2(6720, 3328)
 rotation = 0.558299
-scale = Vector2(1, 1)
 
 [node name="bolasneve3" type="Node2D" parent="."]
 position = Vector2(13048, 6568)
@@ -1374,7 +1357,6 @@ rotation = -1.04821
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(-43.9004, 148.949)
 rotation = -0.515039
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_jqe2b")
 
 [node name="Area2D" type="Area2D" parent="."]
