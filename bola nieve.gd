@@ -113,4 +113,3 @@ func _on_animation_player_animation_finished(anim_name):
 		Global.levado += 1
 		tutibol = 1
 		tutirock = 1
-

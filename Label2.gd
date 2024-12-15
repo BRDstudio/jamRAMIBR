@@ -36,4 +36,3 @@ func set_full_text(new_text):
 func show_letter_by_letter():
 	# Habilita el proceso para mostrar el texto letra por letra
 	set_process(true)
-
