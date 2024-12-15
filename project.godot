@@ -13,7 +13,6 @@ config_version=5
 config/name="jama"
 run/main_scene="res://node_2d.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-<<<<<<< Updated upstream
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 config/icon="res://logino.png"
@@ -23,9 +22,6 @@ config/icon="res://logino.png"
 Global="*res://Global.gd"
 Scoreg="res://scoreg.gd"
 Save="*res://Save.gd"
-=======
-config/icon="res://icon.svg"
->>>>>>> Stashed changes
 
 [display]
 
@@ -46,14 +42,6 @@ ui_accept={
 [internationalization]
 
 locale/translations=PackedStringArray("res://tradsno.en.translation", "res://tradsno.es.translation")
-
-[input]
-
-ui_accept={
-"deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
-]
-}
 
 [rendering]
 
