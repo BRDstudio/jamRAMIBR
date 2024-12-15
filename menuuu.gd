@@ -3,9 +3,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if TranslationServer.get_locale() == "en":
+	if Save.game_data.idiom == 0:
 		TranslationServer.set_locale("en")
-	if TranslationServer.get_locale() == "es":
+	if Save.game_data.idiom == 1:
 		TranslationServer.set_locale("es")
 	Global.score = 0
 	var high_score:int = Global.save_data.highscore
