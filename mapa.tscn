@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b6vgiusb1c0lh"]
+[gd_scene load_steps=38 format=3 uid="uid://b6vgiusb1c0lh"]
 
 [ext_resource type="Script" path="res://score.gd" id="1_7ykcn"]
 [ext_resource type="Texture2D" uid="uid://cxolu0mo18e5r" path="res://pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.jpg" id="1_emf8v"]
@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://cw28ivtwro3ss" path="res://gvhfsf.png" id="24_bb3c3"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yflds"]
-a = Vector2(18152, 9041)
+a = Vector2(71856, 36065)
 b = Vector2(-2191, -1212)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ensss"]
@@ -35,13 +35,12 @@ radius = 63.0079
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rtfsm"]
 particle_flag_disable_z = true
 direction = Vector3(-20, -10, 0)
+gravity = Vector3(0, 98, 0)
 initial_velocity_min = 100.0
 initial_velocity_max = 100.0
-gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
 scale_max = 10.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqogd"]
-size = Vector2(25347.8, 477.838)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8rep"]
 size = Vector2(58, 226)
@@ -176,13 +175,15 @@ _data = {
 }
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_et7w1"]
-particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(10000, 1, 1)
+particle_flag_disable_z = true
 direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 100, 0)
 initial_velocity_min = 173.68
 initial_velocity_max = 173.68
-gravity = Vector3(0, 100, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
 scale_max = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqe2b"]
@@ -1390,10 +1391,6 @@ rotation = 0.464328
 scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelos/Solo47"]
-position = Vector2(11734, -228.918)
-shape = SubResource("RectangleShape2D_wqogd")
-
 [node name="Solo48" type="Sprite2D" parent="Suelos"]
 top_level = true
 position = Vector2(19586.7, 10303.7)
@@ -2223,6 +2220,7 @@ offset_left = 496.0
 offset_top = -7.0
 offset_right = 628.0
 offset_bottom = 60.0
+focus_mode = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("18_4vjdr")
 theme_override_font_sizes/font_size = 48
@@ -2251,7 +2249,6 @@ libraries = {
 
 [node name="Node2D3" type="Node2D" parent="."]
 process_mode = 3
-visible = false
 
 [node name="6" type="Sprite2D" parent="Node2D3"]
 self_modulate = Color(1, 1, 1, 0.643137)
@@ -2278,7 +2275,6 @@ script = ExtResource("20_kaqp5")
 position = Vector2(957, 279)
 rotation = 0.448573
 shape = SubResource("RectangleShape2D_glbsr")
-disabled = true
 
 [node name="SinTítulo" type="Sprite2D" parent="Node2D3"]
 top_level = true
@@ -2319,6 +2315,7 @@ offset_top = 504.0
 offset_right = 1622.0
 offset_bottom = 589.0
 scale = Vector2(1e-05, 1e-05)
+focus_mode = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("18_4vjdr")
 theme_override_font_sizes/font_size = 64

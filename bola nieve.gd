@@ -17,6 +17,14 @@ var constant_speed = 200  # Ajusta el valor de la velocidad
 var direction = Vector2(1, 0)  # Movimiento hacia la derecha (ajústalo según necesites)
 
 func _ready():
+	if tutibol == 0:
+		$"../Node2D2/Area2D/CollisionShape2D".disabled = false
+	if tutirock == 0:
+		$"../Node2D3/Area2D/CollisionShape2D".disabled = false
+	if tutibol == 1:
+		$"../Node2D2/Area2D/CollisionShape2D".disabled = true
+	if tutirock == 1:
+		$"../Node2D3/Area2D/CollisionShape2D".disabled = true
 	get_tree().paused = false
 	$"../Node2D2".visible = false
 
@@ -103,4 +111,6 @@ func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "new_animation":
 		get_tree().reload_current_scene()
 		Global.levado += 1
+		tutibol = 1
+		tutirock = 1
 

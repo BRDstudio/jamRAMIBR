@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://o6751jpxwjgd"]
+[gd_scene load_steps=7 format=3 uid="uid://o6751jpxwjgd"]
 
 [ext_resource type="Script" path="res://options.gd" id="1_4pf60"]
 [ext_resource type="FontFile" uid="uid://mapb028hnase" path="res://Modak-Regular.ttf" id="2_owtmx"]
 [ext_resource type="FontFile" uid="uid://bhxd8g0irveup" path="res://SlacksideOne-Regular.ttf" id="3_ef2i3"]
 [ext_resource type="AudioStream" uid="uid://dnb6vsdh6n6eb" path="res://Menu.mp3" id="4_xwdcd"]
 [ext_resource type="AudioStream" uid="uid://cupip4ddwhj0j" path="res://1212_1_.ogg" id="5_5iqwa"]
+[ext_resource type="Script" path="res://ColorRect3.gd" id="6_agkut"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -39,8 +40,8 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -485.5
-offset_right = 485.5
+offset_left = -464.0
+offset_right = 507.0
 offset_bottom = 390.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -67,6 +68,7 @@ offset_right = 354.5
 offset_bottom = 217.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.207843, 0.207843, 0.207843, 1)
 theme_override_colors/font_focus_color = Color(0.337255, 0.337255, 0.337255, 1)
@@ -89,6 +91,7 @@ offset_right = 300.0
 offset_bottom = -90.0
 grow_horizontal = 2
 grow_vertical = 0
+focus_mode = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.298039, 0.298039, 0.298039, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.215686, 0.215686, 0.215686, 1)
@@ -111,6 +114,7 @@ offset_right = 244.5
 offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.231373, 0.231373, 0.231373, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.215686, 0.215686, 0.215686, 1)
@@ -127,9 +131,90 @@ autoplay = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_5iqwa")
 
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -536.0
+offset_right = 2479.0
+offset_bottom = 1360.0
+color = Color(0, 0, 0, 0.729412)
+script = ExtResource("6_agkut")
+
+[node name="Button" type="Button" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.5
+offset_top = -341.0
+offset_right = 202.5
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.266667, 0.266667, 0.266667, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("3_ef2i3")
+theme_override_font_sizes/font_size = 128
+text = "English"
+flat = true
+
+[node name="Button2" type="Button" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.5
+offset_top = -109.0
+offset_right = 237.5
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.266667, 0.266667, 0.266667, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("3_ef2i3")
+theme_override_font_sizes/font_size = 128
+text = "Español"
+flat = true
+
+[node name="Button3" type="Button" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.5
+offset_top = 109.0
+offset_right = 237.5
+offset_bottom = 303.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.266667, 0.266667, 0.266667, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("3_ef2i3")
+theme_override_font_sizes/font_size = 128
+text = "Exit"
+flat = true
+
 [connection signal="focus_entered" from="Button" to="." method="_on_button_focus_entered"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_entered" from="Button2" to="." method="_on_button_2_mouse_entered"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="mouse_entered" from="Button3" to="." method="_on_button_3_mouse_entered"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="finished" from="AudioStreamPlayer3" to="." method="_on_audio_stream_player_3_finished"]
+[connection signal="mouse_entered" from="ColorRect3/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="pressed" from="ColorRect3/Button" to="ColorRect3" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="ColorRect3/Button2" to="." method="_on_button_2_mouse_entered"]
+[connection signal="pressed" from="ColorRect3/Button2" to="ColorRect3" method="_on_button_2_pressed"]
+[connection signal="mouse_entered" from="ColorRect3/Button3" to="." method="_on_button_3_mouse_entered"]
+[connection signal="pressed" from="ColorRect3/Button3" to="ColorRect3" method="_on_button_3_pressed"]

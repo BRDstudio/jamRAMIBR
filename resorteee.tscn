@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://resorte.gd" id="1_hdbgf"]
 [ext_resource type="Texture2D" uid="uid://b3tnkcn6ow0jb" path="res://Jump (28x28).png" id="2_exwk3"]
-[ext_resource type="AudioStream" uid="uid://8a6wmjm1lcsu" path="res://springboard-b-92439.mp3" id="3_47j8v"]
+[ext_resource type="AudioStream" uid="uid://bi60bcnui8kea" path="res://springboard-b-92439.mp3" id="3_47j8v"]
 
 [sub_resource type="Animation" id="Animation_q7byj"]
 length = 0.001

@@ -13,6 +13,7 @@ func _ready():
 	# Opcional: comienza automáticamente
 	set_full_text("The Main Lines")
 	show_letter_by_letter()
+	
 
 func _process(delta):
 	if current_index < full_text.length():
@@ -35,3 +36,4 @@ func set_full_text(new_text):
 func show_letter_by_letter():
 	# Habilita el proceso para mostrar el texto letra por letra
 	set_process(true)
+

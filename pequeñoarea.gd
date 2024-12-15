@@ -3,7 +3,7 @@ extends CollisionShape2D
 # Variables para el contador y el tamaño
 var contador: int = 10
 var tamaño_inicial: Vector2
-var decrecimiento: float = 0.01
+var decrecimiento: float = 0.05
 var tiempo: float = 0.0
 
 func _ready():
@@ -30,7 +30,6 @@ func update_size():
 	if scale < Vector2(0.1, 0.1):
 		get_tree().change_scene_to_file("res://game_over.tscn")
 		
-		Global.score = 0
 		
 
 func _on_area_2d_area_entered(area):

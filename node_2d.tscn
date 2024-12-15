@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3nibbd7rokud"]
+[gd_scene load_steps=12 format=3 uid="uid://d3nibbd7rokud"]
 
 [ext_resource type="VideoStream" path="res://191443-890121806_small.ogv" id="1_6dqn5"]
+[ext_resource type="Script" path="res://menuuu.gd" id="1_6j0j0"]
 [ext_resource type="Script" path="res://vidmen.gd" id="2_0qa4y"]
 [ext_resource type="FontFile" uid="uid://s0k1wkv1vjit" path="res://RubikGlitch-Regular.ttf" id="3_6qqwd"]
 [ext_resource type="FontFile" uid="uid://mapb028hnase" path="res://Modak-Regular.ttf" id="3_c04dp"]
@@ -49,6 +50,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6j0j0")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 0
@@ -102,10 +104,10 @@ volume_db = -6.559
 autoplay = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 0.55
 libraries = {
 "": SubResource("AnimationLibrary_adcrb")
 }
-speed_scale = 0.55
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 0
@@ -117,10 +119,11 @@ color = Color(0.239216, 0.239216, 0.239216, 0.717647)
 
 [node name="Button" type="Button" parent="ColorRect2"]
 layout_mode = 0
-offset_left = 1363.0
+offset_left = 1349.0
 offset_top = -6.0
-offset_right = 1750.0
-offset_bottom = 134.0
+offset_right = 1736.0
+offset_bottom = 142.0
+focus_mode = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.407843, 0.407843, 0.407843, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -132,10 +135,11 @@ flat = true
 
 [node name="Button2" type="Button" parent="ColorRect2"]
 layout_mode = 0
-offset_left = 1363.0
+offset_left = 1349.0
 offset_top = 162.0
-offset_right = 1750.0
-offset_bottom = 302.0
+offset_right = 1736.0
+offset_bottom = 310.0
+focus_mode = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.407843, 0.407843, 0.407843, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -147,10 +151,11 @@ flat = true
 
 [node name="Button3" type="Button" parent="ColorRect2"]
 layout_mode = 0
-offset_left = 1363.0
+offset_left = 1349.0
 offset_top = 324.0
-offset_right = 1750.0
-offset_bottom = 464.0
+offset_right = 1736.0
+offset_bottom = 472.0
+focus_mode = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.407843, 0.407843, 0.407843, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -163,6 +168,35 @@ flat = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ColorRect2"]
 stream = ExtResource("6_llm6w")
 volume_db = -7.495
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -219.0
+offset_top = -94.0
+offset_right = 208.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.239216, 0.239216, 0.239216, 0.717647)
+
+[node name="Label" type="Label" parent="ColorRect3"]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 40.0
+offset_bottom = 92.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("7_r0nmc")
+theme_override_font_sizes/font_size = 64
 
 [connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="VideoStreamPlayer" method="_on_animation_player_animation_finished"]
