@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://b6vgiusb1c0lh"]
+[gd_scene load_steps=39 format=3 uid="uid://b6vgiusb1c0lh"]
 
 [ext_resource type="Script" path="res://score.gd" id="1_7ykcn"]
 [ext_resource type="Texture2D" uid="uid://cxolu0mo18e5r" path="res://pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.jpg" id="1_emf8v"]
@@ -39,6 +39,9 @@ initial_velocity_min = 100.0
 initial_velocity_max = 100.0
 gravity = Vector3(0, 98, 0)
 scale_max = 10.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqogd"]
+size = Vector2(25347.8, 477.838)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8rep"]
 size = Vector2(58, 226)
@@ -221,10 +224,10 @@ _data = {
 script = ExtResource("1_7ykcn")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = -2709.0
-offset_top = -3679.0
-offset_right = 18631.0
-offset_bottom = 11005.0
+offset_left = -20865.0
+offset_top = -19416.0
+offset_right = 140039.0
+offset_bottom = 64413.0
 color = Color(0.449219, 0.75, 0.773438, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -330,11 +333,683 @@ scale = Vector2(1, 1.002)
 texture = ExtResource("1_emf8v")
 script = ExtResource("4_j52rl")
 
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector13" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2325, 674)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector14" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(632, -178)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector15" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1054, -1029)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector16" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7410.62, 3210.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector17" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(5717.62, 2358.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector18" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(4031.62, 1507.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector19" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(12481.6, 5763.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector20" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(10788.6, 4911.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector21" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(9102.62, 4060.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector22" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(17552, 8312)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector23" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(15864, 7464)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector24" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(14176, 6616)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector25" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(22627.6, 10868.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector26" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(20934.6, 10016.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector27" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(19248.6, 9165.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector28" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(27713.2, 13404.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector29" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(26020.2, 12552.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector30" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(24334.2, 11701.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector31" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32784.2, 15957.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector32" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(31091.2, 15105.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector33" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(29405.2, 14254.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector34" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(37854.6, 18506.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector35" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(36166.6, 17658.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector36" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(34478.6, 16810.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector37" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(22627.6, 10868.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector38" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(20934.6, 10016.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector39" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(19248.6, 9165.18)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector40" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(27706, 13457)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector41" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(26011, 12595)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector42" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(24334, 11720)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector43" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32774, 16008)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector44" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(31095, 15148)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector45" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(29356, 14292)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector46" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(37854.6, 18506.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector47" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(36166.6, 17658.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector48" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(34463, 16848)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector49" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(42921.6, 21061.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector50" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(41228.6, 20209.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector51" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(39542.6, 19358.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector52" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(48007.2, 23597.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector53" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(46314.2, 22745.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector54" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(44628.2, 21894.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector55" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(53078.2, 26150.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector56" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(51385.2, 25298.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector57" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(50339, 24792)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector58" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(58148.6, 28699.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector59" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(56460.6, 27851.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector60" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(54772.6, 27003.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector61" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(42921.6, 21061.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector62" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(41228.6, 20209.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector63" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(39542.6, 19358.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector64" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(47985, 23615)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector65" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(46290, 22809)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector66" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(44616, 21962)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector67" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(53060, 26240)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector68" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(51364, 25332)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector69" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(49524, 24393)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector70" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(58175, 28785)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector71" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(56440, 27912)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector72" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(54741, 27086)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector73" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(63156.6, 31235.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector74" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(61463.6, 30383.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector75" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(59777.6, 29532.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector76" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(68242.2, 33771.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector77" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(66549.2, 32919.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector78" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(64863.2, 32068.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector79" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(73313.2, 36324.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector80" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(71620.2, 35472.4)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector81" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(69919, 34654)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector82" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(78383.6, 38873.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector83" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(76695.6, 38025.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector84" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(75007.6, 37177.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector85" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(63136, 31275)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector86" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(61458, 30434)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector87" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(59746, 29586)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector88" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(68200, 33825)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector89" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(66499, 32970)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector90" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(64823, 32114)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector91" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(73272, 36340)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector92" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(71575, 35487)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector93" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(69874, 34639)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector94" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(78383.6, 38873.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector95" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(76695.6, 38025.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
+[node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector96" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(75007.6, 37177.2)
+rotation = 0.453246
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_emf8v")
+script = ExtResource("4_j52rl")
+
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -2410.0
-offset_top = -1214.0
-offset_right = 22680.0
-offset_bottom = 1754.0
+offset_left = -8110.0
+offset_top = -4086.0
+offset_right = 90222.0
+offset_bottom = -1118.0
 rotation = 0.466665
 
 [node name="resort" type="Node2D" parent="."]
@@ -388,7 +1063,7 @@ scale = Vector2(0.788273, 0.5)
 
 [node name="Solo" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(350.269, 622.802)
+position = Vector2(350, 614)
 rotation = 0.464328
 scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
@@ -654,9 +1329,9 @@ texture = ExtResource("5_avpvg")
 
 [node name="Solo39" type="Sprite2D" parent="Suelos"]
 top_level = true
-position = Vector2(35145.2, 18143)
+position = Vector2(35128.9, 18120.9)
 rotation = 0.464328
-scale = Vector2(0.788273, 0.8)
+scale = Vector2(0.877395, 0.8)
 texture = ExtResource("5_avpvg")
 
 [node name="Solo40" type="Sprite2D" parent="Suelos"]
@@ -715,6 +1390,10 @@ rotation = 0.464328
 scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelos/Solo47"]
+position = Vector2(11734, -228.918)
+shape = SubResource("RectangleShape2D_wqogd")
+
 [node name="Solo48" type="Sprite2D" parent="Suelos"]
 top_level = true
 position = Vector2(19586.7, 10303.7)
@@ -722,10 +1401,346 @@ rotation = 0.464328
 scale = Vector2(0.788273, 0.8)
 texture = ExtResource("5_avpvg")
 
+[node name="Solo49" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(44336.3, 22756.8)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo50" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(43419.8, 22295.4)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo51" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(46168.6, 23677.6)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo52" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(45252.1, 23216.2)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo53" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(48004.6, 24602.6)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo54" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(47088.1, 24141.2)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo55" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(49836.9, 25523.3)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo56" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(48920.4, 25061.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo57" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(51653.6, 26445.6)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo58" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(50737.1, 25984.2)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo59" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(53485.9, 27366.3)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo60" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(52569.4, 26904.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo61" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(55321.8, 28291.3)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo62" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(54405.4, 27829.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo63" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(57154.2, 29212)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo64" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(56237.7, 28750.7)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo65" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(37011.6, 19067.6)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo66" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(36095.1, 18606.2)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo67" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(38843.9, 19988.3)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo68" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(37927.4, 19526.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo69" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(40679.9, 20913.3)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo70" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(39763.4, 20451.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo71" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(42512.2, 21834)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo72" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(41595.8, 21372.7)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo73" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(66313.2, 33821.8)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo74" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(65396.8, 33360.4)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo75" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(68145.5, 34742.5)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo76" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(67229.1, 34281.2)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo77" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(69981.5, 35667.5)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo78" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(69065.1, 35206.2)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo79" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(71813.8, 36588.3)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo80" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(70897.4, 36126.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo81" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(73630.5, 37510.5)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo82" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(72714.1, 37049.2)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo83" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(75462.8, 38431.3)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo84" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(74546.4, 37969.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo85" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(77298.9, 39356.3)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo86" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(76382.4, 38894.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo87" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(79131.2, 40277)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo88" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(78214.7, 39815.7)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo89" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(58988.5, 30132.6)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo90" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(58072.1, 29671.2)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo91" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(60820.8, 31053.3)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo92" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(59904.4, 30591.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo93" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(62656.8, 31978.3)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo94" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(61740.4, 31516.9)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo95" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(64489.2, 32899)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
+[node name="Solo96" type="Sprite2D" parent="Suelos"]
+top_level = true
+position = Vector2(63572.7, 32437.7)
+rotation = 0.464328
+scale = Vector2(0.788273, 0.8)
+texture = ExtResource("5_avpvg")
+
 [node name="ColorRect" type="ColorRect" parent="Suelos"]
-offset_left = -4170.0
+offset_left = -12330.0
 offset_top = 851.0
-offset_right = 27590.0
+offset_right = 112498.0
 offset_bottom = 3410.0
 color = Color(0.219608, 0.117647, 0.0509804, 1)
 
@@ -1355,7 +2370,7 @@ position = Vector2(17732.8, 8479.62)
 rotation = -1.04821
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-43.9004, 148.949)
+position = Vector2(3583.22, 60521.6)
 rotation = -0.515039
 shape = SubResource("RectangleShape2D_jqe2b")
 
@@ -1363,12 +2378,12 @@ shape = SubResource("RectangleShape2D_jqe2b")
 script = ExtResource("23_wtaut")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(17732.8, 8479.62)
+position = Vector2(71858, 35470)
 rotation = -1.04821
 shape = SubResource("RectangleShape2D_jqe2b")
 
 [node name="Gvhfsf" type="Sprite2D" parent="."]
-position = Vector2(17664, 8592)
+position = Vector2(71850, 35869)
 rotation = 0.471923
 scale = Vector2(2, 2)
 texture = ExtResource("24_bb3c3")
@@ -1380,10 +2395,10 @@ libraries = {
 
 [node name="ColorRect" type="ColorRect" parent="Gvhfsf"]
 top_level = true
-offset_left = 15112.0
-offset_top = 7016.0
-offset_right = 19880.0
-offset_bottom = 10064.0
+offset_left = 68983.0
+offset_top = 34043.0
+offset_right = 73751.0
+offset_bottom = 37091.0
 color = Color(0, 0, 0, 0)
 
 [connection signal="body_entered" from="RigidBody2D" to="StaticBody2D" method="_on_rigid_body_2d_body_entered"]
