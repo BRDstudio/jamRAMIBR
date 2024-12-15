@@ -2,9 +2,8 @@
 
 [ext_resource type="Script" path="res://score.gd" id="1_7ykcn"]
 [ext_resource type="Texture2D" uid="uid://cxolu0mo18e5r" path="res://pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.jpg" id="1_emf8v"]
-[ext_resource type="Script" path="res://mapa.gd" id="1_qbgkn"]
+[ext_resource type="Script" path="res://ramp.gd" id="2_1i0dr"]
 [ext_resource type="Texture2D" uid="uid://cbcs3dhx08amj" path="res://a-retro-styled-pixel-art-illustration-of-a-mini-snowball-free-png.png" id="3_4xvto"]
-<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://bola nieve.gd" id="3_cgn31"]
 [ext_resource type="Script" path="res://Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector.gd" id="4_j52rl"]
 [ext_resource type="Texture2D" uid="uid://d1fdo1ogebqws" path="res://solo.jpg" id="5_avpvg"]
@@ -26,9 +25,6 @@
 [ext_resource type="Script" path="res://artp.gd" id="23_wtaut"]
 [ext_resource type="Texture2D" uid="uid://cw28ivtwro3ss" path="res://gvhfsf.png" id="24_bb3c3"]
 [ext_resource type="PackedScene" uid="uid://bjay3w62dqocm" path="res://avione.tscn" id="25_gjjto"]
-=======
-[ext_resource type="Script" path="res://character_body_2d.gd" id="3_y45bf"]
->>>>>>> Stashed changes
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yflds"]
 a = Vector2(71856, 36065)
@@ -247,11 +243,7 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D"]
-<<<<<<< Updated upstream
 script = ExtResource("1_7ykcn")
-=======
-script = ExtResource("1_qbgkn")
->>>>>>> Stashed changes
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = -20865.0
@@ -261,12 +253,12 @@ offset_bottom = 64413.0
 color = Color(0.449219, 0.75, 0.773438, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("2_1i0dr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(96, 159)
 shape = SubResource("SegmentShape2D_yflds")
 
-<<<<<<< Updated upstream
 [node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector2" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(2325, 674)
@@ -2580,32 +2572,3 @@ scale = Vector2(2.98808, 2.55164)
 [connection signal="pressed" from="Node2D2/Button" to="RigidBody2D" method="_on_button_pressed"]
 [connection signal="pressed" from="Node2D3/Button" to="RigidBody2D/CollisionShape2D" method="_on_button_pressed"]
 [connection signal="animation_finished" from="Gvhfsf/AnimationPlayer" to="RigidBody2D" method="_on_animation_player_animation_finished"]
-=======
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1680.0
-offset_bottom = 560.0
-rotation = 0.466665
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("3_y45bf")
-
-[node name="RigidBody2D" type="RigidBody2D" parent="CharacterBody2D"]
-freeze_mode = 1
-
-[node name="A-retro-styled-pixel-art-illustration-of-a-mini-snowball-free-png" type="Sprite2D" parent="CharacterBody2D/RigidBody2D"]
-position = Vector2(379, 101)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("3_4xvto")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/RigidBody2D"]
-position = Vector2(378, 102)
-shape = SubResource("CircleShape2D_ensss")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(378, 102)
-shape = SubResource("CircleShape2D_ensss")
-disabled = true
-
-[connection signal="body_entered" from="CharacterBody2D/RigidBody2D" to="CharacterBody2D/RigidBody2D" method="_on_body_entered"]
-[connection signal="body_exited" from="CharacterBody2D/RigidBody2D" to="CharacterBody2D/RigidBody2D" method="_on_body_exited"]
->>>>>>> Stashed changes
