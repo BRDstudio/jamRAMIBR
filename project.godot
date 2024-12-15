@@ -21,6 +21,7 @@ config/icon="res://logino.png"
 
 Global="*res://Global.gd"
 Scoreg="res://scoreg.gd"
+Save="*res://Save.gd"
 
 [display]
 

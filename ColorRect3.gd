@@ -5,10 +5,14 @@ func _physics_process(delta):
 
 func _on_button_pressed():
 	TranslationServer.set_locale("en")
+	Save.game_data.levels = TranslationServer.get_locale()
+	Save.game_data.save()
 
 
 func _on_button_2_pressed():
 	TranslationServer.set_locale("es")
+	Save.game_data.levels = TranslationServer.get_locale()
+	Save.game_data.save()
 
 
 func _on_button_3_pressed():
