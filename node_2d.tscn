@@ -84,12 +84,34 @@ text = "Slow kills Snow"
 stream = ExtResource("4_x57u5")
 volume_db = -6.559
 autoplay = true
+bus = &"music"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 speed_scale = 0.55
 libraries = {
 "": SubResource("AnimationLibrary_adcrb")
 }
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -387.0
+offset_top = -127.0
+offset_bottom = 21.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.407843, 0.407843, 0.407843, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_r0nmc")
+theme_override_font_sizes/font_size = 96
+text = "Creds."
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 0
@@ -150,6 +172,26 @@ flat = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ColorRect2"]
 stream = ExtResource("6_llm6w")
 volume_db = -7.495
+bus = &"sfx"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -73.0
+offset_right = 692.0
+offset_bottom = 21.0
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("7_r0nmc")
+theme_override_font_sizes/font_size = 36
+text = "Created by: Brdstudio, Rafadev and Blazehur"
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 layout_mode = 1
@@ -182,6 +224,9 @@ theme_override_font_sizes/font_size = 64
 
 [connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="VideoStreamPlayer" method="_on_animation_player_animation_finished"]
+[connection signal="focus_exited" from="Button4" to="VideoStreamPlayer" method="_on_button_focus_exited"]
+[connection signal="mouse_entered" from="Button4" to="VideoStreamPlayer" method="_on_button_mouse_entered"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="focus_exited" from="ColorRect2/Button" to="VideoStreamPlayer" method="_on_button_focus_exited"]
 [connection signal="mouse_entered" from="ColorRect2/Button" to="VideoStreamPlayer" method="_on_button_mouse_entered"]
 [connection signal="pressed" from="ColorRect2/Button" to="VideoStreamPlayer" method="_on_button_pressed"]

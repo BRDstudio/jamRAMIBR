@@ -263,7 +263,6 @@ script = ExtResource("2_1i0dr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(23829.4, 12928.2)
 rotation = 0.466324
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3vmkc")
 
 [node name="Pixel-art-landscape-of-pine-forest-in-the-mountains-8-bit-background-vector2" type="Sprite2D" parent="."]
@@ -2786,10 +2785,12 @@ process_mode = 3
 stream = ExtResource("7_8m1lr")
 volume_db = -4.685
 autoplay = true
+bus = &"music"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_c64hj")
 volume_db = 7.135
+bus = &"sfx"
 
 [node name="Node2D2" type="Node2D" parent="."]
 process_mode = 3

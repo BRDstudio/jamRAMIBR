@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=3 uid="uid://csyse5mq2xkm5"]
+
+[ext_resource type="FontFile" uid="uid://mapb028hnase" path="res://Modak-Regular.ttf" id="1_6vmad"]
+[ext_resource type="Script" path="res://cred.gd" id="1_pwgf1"]
+[ext_resource type="FontFile" uid="uid://bhxd8g0irveup" path="res://SlacksideOne-Regular.ttf" id="2_ixbvn"]
+[ext_resource type="AudioStream" uid="uid://cupip4ddwhj0j" path="res://1212_1_.ogg" id="4_3ci83"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pwgf1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -405.0
+offset_top = -252.0
+offset_right = 2503.0
+offset_bottom = 1375.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1539.5
+offset_right = 1539.5
+offset_bottom = 329.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 0.254902)
+
+[node name="Label" type="Label" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -485.5
+offset_right = 485.5
+offset_bottom = 390.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 13
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("1_6vmad")
+theme_override_font_sizes/font_size = 256
+text = "Credits"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -957.0
+offset_top = -682.0
+offset_right = 957.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = ExtResource("2_ixbvn")
+theme_override_font_sizes/normal_font_size = 24
+text = "Background menu:
+https://pixabay.com/es/videos/%C3%A1rboles-nieve-invierno-191443/
+Snowball:
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.vecteezy.com%2Fpng-gratis%2Fbola-de-nieve&psig=AOvVaw0lwhKceDTHO9hrvKuER5W7&ust=1734395191042000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCPiwp-CDq4oDFQAAAAAdAAAAABAE
+Rock:
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.vecteezy.com%2Fpng-gratis%2Fpiedra-pixel-art&psig=AOvVaw08qXeMWR7Q1xBnlwMKK4FX&ust=1734395252657000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCPDtjvmDq4oDFQAAAAAdAAAAABAJ
+Signpost:
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fes%2Fimage-vector%2Fpixel-art-wooden-signs-old-road-2302164695&psig=AOvVaw24ZL4txWgq9phaSQSbRBX3&ust=1734395352279000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCPCg6KmEq4oDFQAAAAAdAAAAABAE
+Ginger house:
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.spreadshirt.es%2Fshop%2Farticulos-de-escritorio%2Fpegatinas%2F8%2Badviento%2F&psig=AOvVaw00TLDdmYPrOiOOtOiZJy2c&ust=1734395389260000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCOj-3LqEq4oDFQAAAAAdAAAAABAE
+Log:
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fpng%2F27951107-pixel-art-autumn-stump&psig=AOvVaw1AiCfKqpJK0HWxO79h7mCZ&ust=1734395475207000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCJjU5-OEq4oDFQAAAAAdAAAAABAJ
+Mountain background:
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.vecteezy.com%2Farte-vectorial%2F9877819-pixel-art-paisaje-de-pino-bosque-en-las-montanas-8-bit-vector-fondo&psig=AOvVaw31poeHuB335WuGbwKRPwfq&ust=1734395501870000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCKjVrfGEq4oDFQAAAAAdAAAAABAT
+Speech bubble:
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fdepositphotos.com%2Fes%2Fvectors%2Fbocadillo-de-di%25C3%25A1logo-de-p%25C3%25ADxel.html&psig=AOvVaw26iBcF5rgkE0x24MGp7scF&ust=1734395565672000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCNjUy4-Fq4oDFQAAAAAdAAAAABAE
+Floor:
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.es%2Fvector-premium%2Fpatron-bloques-hielo-nieve-tierra-fondo-juego-pixeles-cubicos-tecnologia-2d-interfaz-juego-8-bits-temporada-invierno-telon-fondo-retro-capa-suelo-capa-helada-subterranea-seccion-transversal-tierra_20300565.htm&psig=AOvVaw3x6T5NGJOrTD4cT5lYC9Nj&ust=1734395620525000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCPCGwaiFq4oDFQAAAAAdAAAAABAE
+"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -600.0
+offset_top = 81.0
+offset_bottom = 275.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.298039, 0.298039, 0.298039, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.215686, 0.215686, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_ixbvn")
+theme_override_font_sizes/font_size = 128
+text = "Exit
+"
+flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3ci83")
+bus = &"sfx"
+
+[connection signal="mouse_entered" from="Button2" to="." method="_on_button_2_mouse_entered"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -71,7 +71,8 @@ shape = SubResource("RectangleShape2D_r7rk3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_47j8v")
-volume_db = 4.379
+volume_db = 6.253
+bus = &"sfx"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

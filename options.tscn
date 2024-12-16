@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://o6751jpxwjgd"]
+[gd_scene load_steps=8 format=3 uid="uid://o6751jpxwjgd"]
 
 [ext_resource type="Script" path="res://options.gd" id="1_4pf60"]
 [ext_resource type="FontFile" uid="uid://mapb028hnase" path="res://Modak-Regular.ttf" id="2_owtmx"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dnb6vsdh6n6eb" path="res://Menu.mp3" id="4_xwdcd"]
 [ext_resource type="AudioStream" uid="uid://cupip4ddwhj0j" path="res://1212_1_.ogg" id="5_5iqwa"]
 [ext_resource type="Script" path="res://ColorRect3.gd" id="6_agkut"]
+[ext_resource type="Script" path="res://ColorRect4.gd" id="7_hkjy0"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -127,9 +128,11 @@ flat = true
 stream = ExtResource("4_xwdcd")
 volume_db = -6.559
 autoplay = true
+bus = &"music"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_5iqwa")
+bus = &"sfx"
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 layout_mode = 0
@@ -208,8 +211,115 @@ theme_override_font_sizes/font_size = 128
 text = "Exit"
 flat = true
 
+[node name="ColorRect4" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -2090.0
+offset_top = -526.0
+offset_right = 3304.0
+offset_bottom = 2484.0
+color = Color(0, 0, 0, 0.729412)
+script = ExtResource("7_hkjy0")
+
+[node name="Button3" type="Button" parent="ColorRect4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 127.0
+offset_top = -190.0
+offset_right = 602.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.266667, 0.266667, 0.266667, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("3_ef2i3")
+theme_override_font_sizes/font_size = 128
+text = "Exit"
+flat = true
+
+[node name="Label" type="Label" parent="ColorRect4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 197.0
+offset_top = -404.0
+offset_right = 508.0
+offset_bottom = -215.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 13
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("3_ef2i3")
+theme_override_font_sizes/font_size = 128
+text = "Music"
+
+[node name="Label2" type="Label" parent="ColorRect4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 252.0
+offset_top = -634.0
+offset_right = 563.0
+offset_bottom = -445.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 13
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("3_ef2i3")
+theme_override_font_sizes/font_size = 128
+text = "SFX"
+
+[node name="HSlider" type="HSlider" parent="ColorRect4"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 3273.0
+offset_top = 966.0
+offset_right = 3439.0
+offset_bottom = 982.0
+scale = Vector2(4, 4)
+theme_override_constants/center_grabber = 6
+min_value = -100.0
+max_value = 1.0
+rounded = true
+
+[node name="HSlider2" type="HSlider" parent="ColorRect4"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 3273.0
+offset_top = 1201.0
+offset_right = 3439.0
+offset_bottom = 1217.0
+scale = Vector2(4, 4)
+theme_override_constants/center_grabber = 6
+min_value = -100.0
+max_value = 1.0
+rounded = true
+
 [connection signal="focus_entered" from="Button" to="." method="_on_button_focus_entered"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="Button2" to="." method="_on_button_2_mouse_entered"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="mouse_entered" from="Button3" to="." method="_on_button_3_mouse_entered"]
@@ -221,3 +331,8 @@ flat = true
 [connection signal="pressed" from="ColorRect3/Button2" to="ColorRect3" method="_on_button_2_pressed"]
 [connection signal="mouse_entered" from="ColorRect3/Button3" to="." method="_on_button_3_mouse_entered"]
 [connection signal="pressed" from="ColorRect3/Button3" to="ColorRect3" method="_on_button_3_pressed"]
+[connection signal="mouse_entered" from="ColorRect4/Button3" to="." method="_on_button_3_mouse_entered"]
+[connection signal="pressed" from="ColorRect4/Button3" to="ColorRect4" method="_on_button_3_pressed"]
+[connection signal="changed" from="ColorRect4/HSlider" to="ColorRect4" method="_on_h_slider_changed"]
+[connection signal="value_changed" from="ColorRect4/HSlider" to="ColorRect4" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="ColorRect4/HSlider2" to="ColorRect4" method="_on_h_slider_2_value_changed"]

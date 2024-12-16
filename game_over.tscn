@@ -142,10 +142,12 @@ flat = true
 stream = ExtResource("6_46hv3")
 volume_db = -6.559
 autoplay = true
+bus = &"sfx"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_hixyi")
 volume_db = -7.59
+bus = &"sfx"
 
 [connection signal="focus_entered" from="Button" to="." method="_on_button_focus_entered"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
