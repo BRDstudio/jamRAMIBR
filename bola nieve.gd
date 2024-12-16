@@ -6,7 +6,7 @@ var tutirock = 0
 var tutibol = 0
 
 const JUMP_FORCE = -300  # Vector de fuerza de salto
-
+var masa = $".".mass
 
 
 
@@ -61,7 +61,7 @@ func _on_body_exited(body):
 
 func _on_timer_2_timeout():
 	saltnum = 0
-	linear_velocity.y = 500
+	linear_velocity.y = 600
 
 
 
@@ -73,21 +73,20 @@ func _on_area_2d_area_entered(area):
 		$Timer2.start()
 	if area is rochiña:
 		saltnum = 1
-		linear_velocity.y = -500
 		$Timer2.start()
 	if area is troncmiguel:
 		saltnum = 1
-		linear_velocity.y = -500
 		$Timer2.start()
-	if area is tituareas and tutibol == 0:
+	if area is tituareas and Global.first:
 		tutibol = 1
 		get_tree().paused = true
 		$"../Node2D2".visible = true
 		$"../Node2D2/AnimationPlayer".play("new_animation")
 		$"../GPUParticles2D".emitting = false
 		$"../GPUParticles2D".visible = false
-	if area is enemtut and tutirock == 0:
+	if area is enemtut and Global.first:
 		tutibol = 1
+		Global.first = false
 		get_tree().paused = true
 		$"../Node2D3".visible = true
 		$"../Node2D3/AnimationPlayer".play("new_animation")

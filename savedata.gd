@@ -8,8 +8,10 @@ func save() -> void:
 static func load_or_create() -> SaveData:
 	var res:SaveData
 	if FileAccess.file_exists(SAVE_PATH):
+		Global.first = false
 		res = load(SAVE_PATH) as SaveData
 	else:
+		Global.first = true
 		Save.game_data.idiom = 0
 		Save.save_data()
 		res = SaveData.new()

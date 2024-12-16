@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://tronco.gd" id="2_cgwje"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o74xu"]
-size = Vector2(21.7137, 51.4584)
+size = Vector2(27.0536, 51.4584)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2urt0"]
 size = Vector2(108.41, 15.692)
@@ -23,7 +23,7 @@ scale = Vector2(2.80928, 1.65182)
 script = ExtResource("2_cgwje")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(157.87, 135.911)
+position = Vector2(155.2, 135.911)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_o74xu")
 

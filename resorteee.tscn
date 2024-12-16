@@ -42,10 +42,10 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r7rk3"]
-size = Vector2(65, 55)
+size = Vector2(97, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kys06"]
-size = Vector2(38.6768, 16)
+size = Vector2(58.287, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u17nd"]
 size = Vector2(104.993, 20)
@@ -66,7 +66,7 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(379.5, 241.5)
+position = Vector2(363.5, 241.5)
 shape = SubResource("RectangleShape2D_r7rk3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -76,12 +76,12 @@ volume_db = 4.379
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(277.633, 256.724)
+position = Vector2(281.449, 258.799)
 rotation = -0.511391
 shape = SubResource("RectangleShape2D_kys06")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(361.668, 257)
+position = Vector2(357, 251)
 rotation = 0.00323057
 shape = SubResource("RectangleShape2D_u17nd")
 

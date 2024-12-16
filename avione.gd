@@ -1,7 +1,7 @@
 extends Node2D
 
 # Variables configurables
-@export var velocidad: float = 1000.0
+@export var velocidad: float = 200.0
 @export var altura_maxima: float = -1000.0
 
 # Variable para detectar si un RigidBody2D está en el área
